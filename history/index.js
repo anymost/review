@@ -11,5 +11,8 @@
  * 当点击标签栏的时候，会触发popState事件，这个事件的event.state是前面的
  * pushState的第一个参数，这个参数保存着状态，可以用该状态对象保存的数据来进行填充
  *
- *
+ * 2 hash方式
+ *  监听window.hashchange，当页面的hash发生改变时，会触发改事件
+ *  可以然后可以在location.hash中拿到最新的hash，进行判断然后操作
+ * 
  */
