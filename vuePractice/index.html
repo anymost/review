@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="zh-cn">
+        .blue{
+            color : blue;
+        }
+        .weight{
+            font-weight : 900;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id="app">{{name}}
+        <comp></comp>
+    </div>-->
+ <!--<div id="app">
+     <input type="text" v-model="name">
+     {{name}}
+    </div>-->
+
+    <!--<div id="app">
+     <div>{{tpl | changeToUpper}}</div>
+    </div>-->
+    <!--<div id="app">
+        <h2>data : {{name}}</h2>
+        <h3>computed : {{}}</h3>
+    </div>-->
+    <!--<div id="app">
+        <input type="text" v-model="firstName">
+        <tpl :firstName="firstName"></tpl>
+    </div>-->
+    <!--<div id="app">
+        <input type="text" v-model="firstName">
+        {{fullName}}
+    </div>-->
+    <!--<div id="app">
+        <div :class="{blue:isBlue, weight:isWeight}">hello</div>
+        <div :class="[blue, weight]">world</div>
+    </div>-->
+<!--
+    <div id="app">
+        <div :style="[style]">hello world</div>
+
+    </div>-->
+    <!--<div id="app">
+        <div :style></div>
+    </div>-->
+    <div id="app">
+        <template v-if="isShow == 'one'">
+            <div>this is one</div>
+        </template>
+        <template v-else-if="isShow == 'two'">
+            <div>this is two</div>
+        </template>
+        <template v-else>
+            <div>this is three</div>
+        </template>
+    </div>
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="./code.js"></script>
+</body>
+</html>
