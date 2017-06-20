@@ -12,8 +12,42 @@
 <script src="./react.js"></script>
 <script src="./react-dom.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-<script type="text/babel" src="index.js"></script>
 <script type="text/babel">
+
+    class Father extends React.Component{
+        constructor (props){
+            super(props)
+            this.state = {
+                name : 'jack'
+            }
+            this.handleClick = this.handleClick.bind(this);
+        }
+        handleClick (value) {
+            this.setState({name:value});
+        }
+        render () {
+            return <div>
+                <h2>{this.state.name}</h2>
+                <Son handleClick={this.handleClick}></Son>
+            </div>
+        }
+    }
+    class Son extends React.Component{
+        constructor (props){
+            super(props);
+            this.handleClick = this.handleClick.bind(this);
+        }
+        handleClick (event){
+            this.props.handleClick(event.target.value);
+        }
+        render (){
+            return <div>
+                <input type="text" onChange={this.handleClick}/>
+            </div>
+        }
+    }
+
+    ReactDOM.render(<Father/>, document.querySelector('#root'));
     /*
      class Clock extends React.Component {
      constructor(props) {

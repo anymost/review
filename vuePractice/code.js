@@ -154,9 +154,60 @@ function print(value){
 //     }
 //  })
 
-let app = new Vue({
-     el : '#app',
-     data : {
-        persons : ['jack', 'jones', 'john']
+// let app = new Vue({
+//      el : '#app',
+//      data : {
+//         persons : ['jack', 'jones', 'john']
+//     }
+//  })
+
+// let app = new Vue({
+//     el : '#app',
+//     data : {
+//         persons : ['jack', 'rose', 'david', 'jacky'],
+//         man : {
+//             name : 'jack',
+//             age : 11,
+//             sex : 'male'
+//         }
+//     }
+// })
+
+
+// let app = new Vue({
+//     el : '#app',
+//     data : {
+//         width : '200px',
+//         height : '200px',
+//         color　: 'grey' 
+//     },
+//     methods : {
+//         handleMouseOver (value,event){
+//             print(event);
+//             print(value);
+//         }
+//     }
+// })
+let comp = {
+    template : '<div @click="handleClick">{{name}}</div>',
+    props : ['click', 'name'],
+    methods : {
+        handleClick (event){
+            this.click(event.target.innerHTML);
+        }
     }
- })
+}
+let app = new Vue({
+    el : '#app',
+    data : {
+        childName : 'this is child'
+    },
+    methods : {
+        handleClick (value){
+            print(`this is ${value}`);
+        }
+    },
+    components : {
+        Comp : comp
+    }
+});

@@ -65,10 +65,28 @@
         <button @click="clickOne,clickTwo"></button>
     </div>-->
 
-    <div id="app">
+    <!--<div id="app">
         <h3 v-for="(index, value) in persons">{{index}}-{{value}}</h3>
-    </div>
+    </div>-->
 
+    <!--<div id="app">
+        <template v-for="(person, index) in persons">
+            <span :for="index">{{person}}----{{index}}</span>
+        </template>
+        <template v-for="(value, key, index) in man">
+            <span :for="index">{{value}}----{{key}} </span>
+        </template>
+        <li v-for="item in 10">{{item}} </li>
+    </div>-->
+
+    <!--<div id="app">
+        <div style="background-color:cadetblue;width:400px;height:400px" @click="handleMouseOver('good', $event)">
+            <div style="background-color:darkcyan;width:200px;height:200px"></div>
+        </div>
+    </div>-->
+    <div id="app">
+        <Comp :click="handleClick" :name="childName"></Comp>
+    </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="./code.js"></script>
