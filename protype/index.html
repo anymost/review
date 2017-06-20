@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button>click</button>
+<script>
+    let button = document.querySelector('button');
+    button.addEventListener('click', function (){
+        let body = document.querySelector('body');
+        let script = document.createElement('script');
+        script.src = '../interview/index.js';
+        body.appendChild(script);
+        script.addEventListener('load', function (){
+           console.log('script load complete')
+        });
+    },false);
+
+</script>
+
+</body>
+</html>

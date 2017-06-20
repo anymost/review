@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<iframe src="http://localhost:63342/复习啦/html/destination.html" frameborder="0"></iframe>
+<script>
+    setTimeout(function () {
+        document.querySelector('iframe').contentWindow.postMessage('hello world', 'http://localhost:63342');
+    },3000);
+</script>
+
+<script>
+    window.location
+</script>
+
+</body>
+</html>

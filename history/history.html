@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>page 0</title>
+    </head>
+    <body>
+        <div>
+            <a>click me</a>
+            <h2>page 0</h2>
+        </div>
+        <script>
+
+       let a = document.querySelector('a'),
+           head = document.querySelector('h2');
+           start = 0;
+       location.replace('localhost:63342?page=0')
+           function changePage (page){
+               a.innerHTML = `link ${page}`;
+               head.innerHTML = `page ${page}`;
+               document.title = `title ${page}`;
+           }
+           a.addEventListener('click', function (event){
+                event.preventDefault();
+                changePage(start++);
+                history.pushState({page:start,data : `page ${start}`},
+                    `title ${start}`,
+                    `?page=${start}`
+                )
+           });
+            window.addEventListener('popstate', function (event){
+                changePage(event.state.page);
+                console.log(event.state);
+            })
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,18 @@
+{
+  "name": "diff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bel": "^4.6.0",
+    "diff-dom": "^2.1.0",
+    "diffhtml": "^0.9.2",
+    "morphdom": "^2.3.2",
+    "nanomorph": "^4.0.4"
+  }
+}

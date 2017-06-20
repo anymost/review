@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bel": "^4.6.0",
+    "css-loader": "^0.27.1",
+    "morphdom": "^2.3.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1"
+  }
+}

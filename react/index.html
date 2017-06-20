@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+
+<div id="root"></div>
+<script src="./react.js"></script>
+<script src="./react-dom.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script type="text/babel" src="index.js"></script>
+<script type="text/babel">
+    /*
+     class Clock extends React.Component {
+     constructor(props) {
+     super(props);
+     this.state = {date: new Date()}
+     }
+
+     tick() {
+     this.setState({date: new Date()});
+     this.setState((prevState, props)=>({
+     counter:prevState.counter+props.counter
+     }))
+     }
+
+     render() {
+     return (
+     <div>
+     <h1>hello world</h1>
+     <h2>{this.state.date.toLocaleTimeString()}</h2>
+     </div>
+     )
+     }
+     componentDidMount() {
+     this.timerId = setInterval(()=>this.tick(),1000);
+     }
+     componentWillUnmount() {
+     clearInterval(this.timerId);
+     }
+     }
+     */
+
+
+    /* class ShowDate extends React.Component {
+     constructor(props) {
+     super(props);
+     this.state = {date: new Date()};
+     //this.showDate = this.showDate.bind(this);
+     }
+     showDate = ()=>{
+     this.setState({date:new Date()});
+     };
+     render() {
+     return (
+     <div>
+     <input type="button" value="show date" onClick={this.showDate}/>
+     <div>{this.state.date.toLocaleTimeString()}</div>
+     </div>
+     )
+     }
+
+
+     }
+     */
+    /*
+     class Greeting extends  React.Component{
+     constructor(props){
+     super(props)
+     }
+     render () {
+     let isLogin = this.props.isLogin;
+     let template = isLogin?<div>welcome login</div>:<div>good bye</div>;
+     return template;
+     }
+     }
+     class LoginControl extends React.Component {
+     constructor(props) {
+     super(props);
+     this.state = {isLogin: true}
+     }
+
+     handleLogin = () => {
+     this.setState({isLogin: true});
+     };
+     handleLogout = () => {
+     this.setState({isLogin: false});
+     };
+
+     render() {
+     let button = null;
+     if (this.state.isLogin) {
+     button = <input type="button" onClick={this.handleLogout} value="logout"/>;
+     } else {
+     button = <input type="button" onClick={this.handleLogin} value="login"/>;
+     }
+     return (
+     <div>
+     {button}
+     <Greeting isLogin={this.state.isLogin}/>
+     </div>
+     )
+     }
+     }*/
+
+    /*function Mailbox(props) {
+     const unreadMessages = props.unreadMessages;
+     return (
+     <div>
+     <h1>Hello!</h1>
+     {unreadMessages.length > 0 &&
+     <h2>
+     You have {unreadMessages.length} unread messages.
+     </h2>
+     }
+     </div>
+     );
+     }
+
+     const messages = ['React', 'Re: React', 'Re:Re: React'];
+     ReactDOM.render(
+     <Mailbox unreadMessages={messages} />,
+     document.getElementById('root')
+     );*/
+
+    /* class Mail extends React.Component{
+     constructor(props){
+     super(props);
+     }
+     render () {
+     return (<div>
+     {this.props.isHello&&'hello world'}
+     </div>)
+     }
+     }
+     ReactDOM.render(<Mail isHello={'hello world'}/>,document.querySelector('#root'));*/
+
+    /*function Mail(){
+     let persons = ['jack', 'jones', 'john', 'jessy'];
+     return <ul>
+     {persons.map(item => <li key={item}>{item}</li>)}
+     </ul>
+     }*/
+    /* class UserName extends React.Component{
+     constructor (props){
+     super(props);
+     this.state = {age:''}
+     }
+     render () {
+     return (<div><form onSubmit={this.handleSubmit}>
+     <input type="text" value={this.state.age} onChange={this.handleInput}/>
+     <button type="submit">submit</button>
+     </form><div>{this.state.age}</div></div>)
+     }
+     handleInput = (event)=>{
+     this.setState({age : event.target.value});
+     };
+     handleSubmit = (event) => {
+     event.preventDefault();
+     alert(this.state.age);
+     }
+     }*/
+    /* class BigForm extends React.Component{
+     constructor (props) {
+     super(props);
+     this.state = {
+     guestNumber : 0,
+     isGoing : false
+     }
+     }
+     handleInput = (event)=>{
+     let target = event.target;
+     let value = target.type=='checkbox' ? target.checked : target.value;
+     let age = target.age;
+     /!**
+     * 计算属性 这里使用计算属性，是因为在javascript的对象中，属性默认为字符串，如果传入一个变量
+     * 会被解析成这个变量的名称为对象的属性
+     * var newState = {};
+     * newState[age] = value;
+     *!/
+     this.setState({[age]:value});
+     };
+     handleSubmit = (event)=>{
+     event.preventDefault();
+     console.log('isGoing '+this.state.isGoing+' guestNumber '+this.state.guestNumber);
+     };
+     render () {
+     return <form onSubmit={this.handleSubmit}>
+     <input type="number" age="guestNumber" value={this.state.guestNumber} onChange={this.handleInput}/>
+     <input type="checkbox" age="isGoing" value={this.state.isGoing} onChange={this.handleInput}/>
+     <input type="submit" value="submit"/>
+     </form>
+     }
+     }*/
+  /*  class BoilingVerdict extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+
+        render() {
+            return <h4>{this.props.celsius >= 100 ? 'the water is boil' : 'the water is not boil'}</h4>;
+        }
+    }
+
+    class Calculator extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {celsius: 0};
+        }
+
+        render(){
+
+        }
+    }*/
+    /*function Father(props){
+        return <div id="father">{props.children}</div>
+    }
+    function Container (){
+        return <div><Father><h2>haha</h2><h3>hehe</h3></Father></div>
+    }*/
+/*
+    var color = {
+        border : '1px solid blue'
+    };
+    function FancyBorder (props){
+        return <div style={color}>{props.children}</div>
+    }
+    function Dialog(props){
+        return <FancyBorder>
+            <h2>{props.welcome}</h2>
+            <h3>{props.title}</h3>
+            <div>{props.children}</div>
+        </FancyBorder>
+    }
+    class Container extends React.Component{
+        constructor (props){
+            super(props)
+        }
+        render () {
+            return <div>
+                <Dialog title="my title" welcome="welcome back">
+                    <h4>hehe</h4>
+                    <h5>haha</h5>
+                </Dialog>
+            </div>
+        }
+
+    }
+
+
+    ReactDOM.render(<Container/>, document.querySelector('#root'));*/
+
+
+   /* import {Hello, World} from './react'
+    let component ={
+        hello : Hello,
+        world : World
+    }
+
+    let FinalComponent = component[props.componentName];*/
+
+    /*function Container() {
+        let names =[
+            {age : 'jack', id : 1},
+            {age : 'jones', id : 2},
+            {age : 'john', id : 3}
+        ];
+        return <div><ul>{names.map((item)=><li key={item.id}>{item.age}</li>)}</ul></div>
+    }
+    ReactDOM.render(<Container/>, document.querySelector('#root'));*/
+   /* class Container extends React.Component {
+        constructor(props){
+            super(props);
+        }
+        render () {
+            return <div>
+                age:<h2>{this.props.age}</h2>
+                age:<h3>{this.props.age}</h3>
+                address:<h4>{this.props.address}</h4>
+                <div>{this.props.sayHello()}</div>
+            </div>
+        }
+    }
+    Container.defaultProps = {
+        sayHello : function () {
+            return <h5>hello world</h5>
+        }
+    };
+    Container.propTypes = {
+        age : React.PropTypes.string,
+        age : React.PropTypes.number,
+        address : React.PropTypes.string,
+        sayHello : React.PropTypes.func
+    };
+    let props = {
+        age : 'jack',
+        age : 11,
+        address : 'China',
+    };
+    /!**
+     * react 属性静态类型检查的类型 string number boolean func array object element
+     *!/
+    ReactDOM.render(<Container {...props}/>, document.querySelector('#root'));*/
+
+   /* class Container extends React.Component {
+        constructor(props){
+            super(props);
+        }
+        focus= ()=>{
+            this.input.focus();
+        };
+        render () {
+            return <div>
+                <input type="text" ref={(input)=>{this.input=input}}/>
+                <input type="button" onClick={this.focus}/>
+            </div>
+        }
+    }*/
+
+    /**
+     * 针对react 的表单组件 通常分为控制性组件和非控制性组件
+     * 控制性组件 通常在组件上绑定事件的处理函数，在这个处理函数中将react的状态设为这个组件的值
+     * 非控制性组件 在组件上设定ref属性，通过ref属性可以拿到这个组件的实例，然后访问实例中的值
+     */
+   /* class Container extends React.Component{
+        constructor (props){
+            super(props);
+            this.state = {value : 'haha'};
+        }
+        setValue = (event)=>{
+          this.setState({value:event.target.value});
+        };
+        submit = (event)=>{
+            event.preventDefault();
+            console.log(this.state.value);
+        };
+        render () {
+            return <form onSubmit={this.submit}>
+                <input type="text" value={this.state.value}   onChange={this.setValue}/>
+                <button>submit</button>
+            </form>
+        }
+    }
+
+    ReactDOM.render(<Container/>, document.querySelector('#root'));*/
+
+
+    /**
+     * React ES6
+     * class Hello extends React.Component{
+     *      constructor () {
+     *      this.state = {};
+     * }
+     *
+     * Hello.defaultProps = {}
+     * Hello.propTypes = {}
+     *
+     * React ES5
+     * var Hello = React.createClass({
+     *      getDefaultProps : function (){return {}}
+     *      propTypes : {},
+     *      getDefaultProps:function () {
+     *      return {}}
+     * })
+     *
+     * React diff算法：
+     * 两棵DOM tree 首先比较根节点类型是否相同，如果不同，则移除原理DOM tree，插入新的DOM tree
+     * 这个时候 会调用原来根节点的componentWillUnmount 和新节点的componentWillMount
+     *
+     * 如果节点类型相同 观察是DOM节点还是react element
+     *
+     * 1 如果是DOM 节点，则仅修改节点的属性
+     * 2 如果是react element 则调用
+     *
+     *
+     *
+     * redux 通过createStore()方法创建一个store
+     * store有getState()，dispatch()，subscribe()方法
+     * getState获取当前的状态 视图变化修改状态
+     * dispatch通知store发生的变化，参数为action，包含具体的信息
+     * reducer(state,action)接收到action后，比对当前的state和action，返回一个新的state
+     * reducer为纯函数，纯函数的概念就是输入相同输出相同，不会修改输入(参数)
+     * 确保状态相同，view相同 不直接修改state而是返回新的state
+     * subscribe方法，当state发生变化时，该方法就会自动调用，因此可以将修改view的函数当作
+     * 参数传入该方法，实现自动修改视图
+     *
+     * 工作方式：用户在view中执行了操作，触发store.dispatch(action),store的reducer函数就会自动执行
+     * 通过action和previousState返回一个新的state，state发生修改，
+     * 这个时候store.subscribe（listener）就会自动调用，在listener中，通过store.getState()获取状态
+     * 对view进行修改或setState
+     *
+     * 中间件的概念：引入applyMiddleware方法，该方法的参数为中间件，然后将该方法作为createStore的第三个参数
+     * 通常，同步操作只需要发出一个action，而异步操作会有三种类型的action，一般会发出其中的两种，
+     * 发起操作时的action跟同步是相同的，但是怎么在操作成功时dispatch action呢，这就需要action creator了
+     * action creator返回一个函数，这个函数的参数是dispatch和getState，在该函数中，先发出一个action，
+     * 然后执行异步操作，操作结束后，在发出另一个action，但是这个action creator返回的是函数，
+     * store.dispatch需要的是对象，因此，我们使用redux-thunk
+     *
+     *
+     */
+
+</script>
+</body>
+</html>

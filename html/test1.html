@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        div{
+            width:200px;
+            height:200px;
+        }
+        div:nth-child(1){
+            background-color: aqua;
+        }
+        div:nth-child(2){
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+<script>
+    var text = document.querySelector('textarea');
+    text.addEventListener('keyup', function (event) {
+        console.log(event.keyCode);
+        console.log(event.which);
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+$a : 1px;
+
+div{
+  font-size:$a;
+}
+/*
+sass的几个特性：
+1 变量 ： $a:1px;
+2 支持计算
+3 支持嵌套：包括标签选择器的嵌套和属性嵌套
+4 支持继承
+.class1{
+  color:blue;
+}
+.class2{
+  @extend .class1;
+  font-size:10px;
+}
+5 支持mixin：
+@mixin mix{
+  color:blue;
+}
+div{
+  @include mix;
+}
+
+可支持(默认)参数
+@mixin mix($color:blue){
+  color:$color;
+}
+div{
+  @include mix(red);
+}
+
+6插入文件
+@import "hello.scss" || @import "hello.css"
+
+7 if条件判断
+
+@if $color==blue{
+  color:red;
+}@else{
+  color:blue;
+}
+
+8 while循环
+@while $i>0{
+  .item#{$i}{
+    color:blue;
+  }
+  $i:$i-1
+}
+
+9 自定义函数
+@function getNum($n){
+  return $n*2;
+}
+div{
+  font-size:getNum(10px)
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+变量
+计算
+嵌套
+继承
+mixin
+导入
+if
+while
+function
+ */

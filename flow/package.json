@@ -1,0 +1,14 @@
+{
+  "name": "flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flow-bin": "^0.41.0"
+  }
+}

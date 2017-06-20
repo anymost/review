@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <style>
+        div:after{
+            content:'hahaha';
+            display:block;
+            clear:both;
+
+        }
+    </style>
+</head>
+<body>
+<script>
+    /**
+     * css盒模型 默认设置的width和height为内容的宽高，
+     * 块元素实际占的大小由margin，border，padding，width，height构成
+     * offsetWidth只包括width，padding，border
+     * 边框的颜色默认与元素的color相同，padding的颜色与元素的background-color相同
+     *
+     *
+     *
+     *
+     * 块级元素 其width margin-left margin-right 可以设定为auto
+     * 在其他属性默认为0的情况下，
+     * 如果这个三个属性中有一个为auto，其他的为定值，则该属性具体值为父元素的宽度-另外两个设置了值的属性的值
+     * 如果这三个属性中margin都为auto ，width为定值，margin=(父元素的宽度-width）/2
+     * 如果这三个属性中width为auto，其中一个margin为auto，另一个margin为定值，
+     * 则设定为auto的margin为0
+     * 如果这三个属性都为auto，则实际中margin值为0
+     *
+     *
+     * 其中外边距可以为负 要求7个属性值加起来等于父元素的宽
+     *
+     * 垂直方向上 margin会发生合并 因此实际的margin会比两个元素的margin之和要小
+     *
+     * 行内元素（非替换的元素） 无法设定宽高 不自动换行 无法设定行高
+     * 块级元素（替换元素） 可以设定宽高  自动换行 可以设定行高
+     * inline-block 可以设定宽高 不自动换行
+     * 可以将块级元素的display设为inline，也可以将行内元素的display设为block
+     * 这样块级元素就具有行内元素的特性，行内元素就具有块级元素的特性，同时，行内元素也可以包含块级元素了
+     * 可以将行内元素的display设为inline-block 这样行内元素就可以设定宽高
+     *
+     * margin和padding的设定，如果是百分数，则会通过包含块的width来计算
+     *
+     * 浮动元素margin不会合并 会自动生成块级框
+     *
+     * 清除浮动：如果给一个元素设定清除浮动clear，该值为left时，可以理解为其左边不能有浮动元素
+     * 该值为right时，可以理解其右边不能有浮动元素，该值为both时，可以理解为左右都不能有浮动元素
+     * clear的作用相当于增加该元素的margin-top
+     *
+     *
+     * 使用伪类:after清除浮动的原理是：
+     *
+     * :after会往要包含块里面追加内容，而该内容的要求是：clear:both，
+     * 含义是该内容的左右两边都不能有浮动元素，因此这个追加的内容会设置到浮动元素的底部位置
+     * 这样父元素的高度应该是大于或等于浮动元素的高度的 这就实现了撑起父元素的高度
+     *
+     * 而为什么浮动的元素不能撑起父元素的高度呢，是因为浮动的元素脱离了文档流，而这个时候父元素里面没有
+     * 其他的内容撑起父元素，这个时候父元素高度为0，而
+     *
+     */
+</script>
+
+<button onclick="abc('<a href=#>一个连接</a>')">点我</button>
+
+<script>
+    function abc(data){
+        alert(data);
+    }
+</script>
+</body>
+</html>
