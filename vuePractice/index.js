@@ -26,4 +26,15 @@
  *      使用key进行缓存
  *      v-if vs v-show
  * 
+ * 6 列表渲染
+ *      template 
+ *      数组渲染 (value, index) in arrays
+ *      对象渲染 (value, key, index) in object
+ *      整数迭代渲染 item in 10
+ *      v-for with v-if v-for的优先级由于v-if 因此，在每一个列表渲染的子项中将进行判断
+ *      使用key来提高效率 such as :key="index"
+ *      数组渲染时，可以监听数组的一些方法的使用push,pop,shift,unshift,splice,reverse,sort
+ * 
+ * 
+ * 
  */

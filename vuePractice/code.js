@@ -138,9 +138,25 @@ function print(value){
 //     }
 //  })
 
+// let app = new Vue({
+//      el : '#app',
+//      data : {
+//        isShow : 'one'
+//     },
+//     methods : {
+//         clickOne (){
+//             print('click one time');
+//         },
+//         clickTwo (){
+//             print('click two time');
+//         }
+
+//     }
+//  })
+
 let app = new Vue({
      el : '#app',
      data : {
-       isShow : 'one'
+        persons : ['jack', 'jones', 'john']
     }
  })
