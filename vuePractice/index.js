@@ -47,6 +47,12 @@
  *  自定义事件 子组件向父组件通信
  *  区分父子组件各自的作用域
  *  单个slot插槽，具名插槽 用于渲染父组件中的内容
- * 
+ *  动态组件 :is keep-alive
+ *
+ *
+ *  9 表单绑定
+ *   text checkbox(单个或多个) radio select
+ *   绑定value :true-value :false-value :value
+ *   .lazy .number .trim
  * 
 */

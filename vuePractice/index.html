@@ -110,15 +110,54 @@
         <son>father content</son>
     </div>-->
 
+    <!--<div id="app">-->
+        <!--<son>-->
+            <!--<template slot="contentOne">-->
+                <!--<h4>content one</h4>-->
+            <!--</template>-->
+            <!--<template slot="contentTwo">-->
+                <!--<h4>content two</h4>-->
+            <!--</template>-->
+        <!--</son>-->
+    <!--</div>-->
+
+   <!-- <div id="app">
+        <input type="radio" name="comp" value="componentOne" v-model="chooseComponent">
+        <input type="radio" name="comp" value="componentTwo" v-model="chooseComponent">
+        <input type="radio" name="comp" value="componentThree" v-model="chooseComponent">
+        <keep-alive>
+        <component :is="chooseComponent"></component>
+        </keep-alive>
+    </div>-->
+
     <div id="app">
-        <son>
-            <template slot="contentOne">
-                <h4>content one</h4>
-            </template>
-            <template slot="contentTwo">
-                <h4>content two</h4>
-            </template>
-        </son>
+        <label for="text">{{text}}</label>
+        <input id="text" type="text" v-model.number="text">
+        <br>
+        <label for="singleCheck">{{singleCheck}}</label>
+        <input id="singleCheck" :true-value="checkValue" type="checkbox" v-model="singleCheck">
+        <br>
+        <div>
+            <input type="checkbox" value="one" v-model="multiCheck">
+            <input type="checkbox" value="two" v-model="multiCheck">
+            <input type="checkbox" value="three" v-model="multiCheck">
+            <input type="checkbox" value="four" v-model="multiCheck">
+            <h5>{{multiCheck}}</h5>
+        </div>
+        <div>
+            <input type="radio"  :value="radioValue" v-model="radio">
+            <input type="radio" value="two" v-model="radio">
+            <input type="radio" value="three" v-model="radio">
+            <h5>{{radio}}</h5>
+        </div>
+        <div>
+        <select v-model="select">
+            <option :value="selectValue">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <h5>{{select}}</h5>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>

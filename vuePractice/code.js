@@ -325,6 +325,7 @@ function print(value){
 //     }
 // });
 
+/*
 
 let son = {
     template : `<div>
@@ -341,4 +342,41 @@ let app = new Vue({
     components : {
         son : son
     }
-});
+});*/
+/*
+
+let componentOne = {
+    template : '<div>one</div>'
+};
+let componentTwo = {
+    template : '<div>two</div>'
+};
+let componentThree = {
+    template : '<div>three</div>'
+};
+let app = new Vue({
+    el : '#app',
+    data : {
+        chooseComponent : 'componentOne'
+    },
+    components : {
+        componentOne,
+        componentTwo,
+        componentThree
+    }
+});*/
+
+
+let app = new Vue({
+    el : '#app',
+    data : {
+        text : '',
+        singleCheck : false,
+        multiCheck : [],
+        checkValue : 'this is check value',
+        radio : '',
+        radioValue : 'this is radio value',
+        select : '',
+        selectValue : 'this is select value'
+    }
+})
