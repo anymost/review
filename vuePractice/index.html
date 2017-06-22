@@ -84,8 +84,41 @@
             <div style="background-color:darkcyan;width:200px;height:200px"></div>
         </div>
     </div>-->
-    <div id="app">
+    <!--<div id="app">
         <Comp :click="handleClick" :name="childName"></Comp>
+    </div>-->
+    <!--<div id="app">
+        <input type="text" v-model="name">
+        <comp :father-name="name"></comp>
+        <comp></comp>
+        <comp></comp>
+    </div>-->
+
+<!--
+    <div id="app">  
+        <h4> {{counter}} </h4>
+        <counter v-on:trigger="addCounter"></counter>
+        <counter v-on:trigger="addCounter"></counter>
+    </div>-->
+<!--
+    <div id="app">
+        <h4>{{name}}</h4>
+        <son :name.sync="name"></son>
+    </div>-->
+    <!--<div id="app">
+        {{name}}
+        <son>father content</son>
+    </div>-->
+
+    <div id="app">
+        <son>
+            <template slot="contentOne">
+                <h4>content one</h4>
+            </template>
+            <template slot="contentTwo">
+                <h4>content two</h4>
+            </template>
+        </son>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>

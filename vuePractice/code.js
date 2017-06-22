@@ -188,26 +188,157 @@ function print(value){
 //         }
 //     }
 // })
-let comp = {
-    template : '<div @click="handleClick">{{name}}</div>',
-    props : ['click', 'name'],
-    methods : {
-        handleClick (event){
-            this.click(event.target.innerHTML);
-        }
-    }
-}
+
+
+// let comp = {
+//     template : '<div @click="handleClick">{{name}}</div>',
+//     props : ['click', 'name'],
+//     methods : {
+//         handleClick (event){
+//             this.click(event.target.innerHTML);
+//         }
+//     }
+// }
+// let app = new Vue({
+//     el : '#app',
+//     data : {
+//         childName : 'this is child'
+//     },
+//     methods : {
+//         handleClick (value){
+//             print(`this is ${value}`);
+//         }
+//     },
+//     components : {
+//         Comp : comp
+//     }
+// });
+
+// let comp = {
+//     template : '<div><h4>{{fatherName}}--{{time}}</h4><button @click="add">add</button></div>',
+//     data (){
+//         return {
+//             time : 0
+//         }
+//     },
+//     props:[
+//         'fatherName'
+//     ],
+//     methods : {
+//         add (){
+//             this.time++;
+//         }
+//     }
+// }
+
+// let vue = new Vue({
+//     el : '#app',
+//     data : {
+//         name : 'jack'
+//     },
+//     components : {
+//         comp : comp
+//     }
+// });
+
+// let sonComponent = {
+//             template : '<div><button @click="handleClick">click me</button></div>',
+//             methods : {
+//                 handleClick (){
+//                     this.$emit('clickbutton');
+//                 }
+//             }
+//         };
+
+
+// let vue = new Vue({
+//     el : '#app',
+//     methods : {
+//         handleClick (){
+//             console.log('click');
+//         }
+//     },
+//     components : {
+//         sonComponent : sonComponent
+//     }
+// });
+
+// let counter = {
+//     template : '<div><button @click="triggerCounter">{{counter}}</button></div>',
+//     data (){
+//         return {
+//             counter : 0
+//         };
+//     },
+//     methods : {
+//         triggerCounter (){
+//             this.counter++;
+//             this.$emit('trigger');
+//         }
+//     }
+// };
+// let app = new Vue({
+//     el : '#app',
+//     data : {
+//         counter : 0
+//     },
+//     methods : {
+//         addCounter (){
+//             this.counter++;
+//         }
+//     },
+//     components : {
+//         counter : counter
+//     }
+// });'
+
+// let son = {
+//     template : '<div><input v-model="name"><h5>{{name}}</h5></div>',
+//     props : ['name'],
+//     computed : {
+//         name (){
+//             return this.name;
+//         }
+//     }
+// };
+// let app = new Vue({
+//     el : '#app',
+//     data　: {
+//         name : "jack"
+//     },
+//     components : {
+//         son : son
+//     }
+// });
+
+
+// let son = {
+//     template : '<div><h4>own content</h4><slot></slot></div>',
+// };
+// let app = new Vue({
+//     el : '#app',
+//     data　: {
+//         name : "jack"
+//     },
+//     components : {
+//         son : son
+//     }
+// });
+
+
+let son = {
+    template : `<div>
+    <h4>own content</h4>
+    <slot name="contentTwo"></slot>
+    <slot name="contentOne"></slot>
+    </div>`,
+};
 let app = new Vue({
     el : '#app',
-    data : {
-        childName : 'this is child'
-    },
-    methods : {
-        handleClick (value){
-            print(`this is ${value}`);
-        }
+    data　: {
+        name : "jack"
     },
     components : {
-        Comp : comp
+        son : son
     }
 });
