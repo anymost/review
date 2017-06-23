@@ -366,6 +366,7 @@ let app = new Vue({
     }
 });*/
 
+/*
 
 let app = new Vue({
     el : '#app',
@@ -379,4 +380,43 @@ let app = new Vue({
         select : '',
         selectValue : 'this is select value'
     }
-})
+})*/
+
+/*
+let app = new Vue({
+    el : '#app',
+    data : {
+        persons : {
+            name : 'jack',
+            age : 11
+        }
+    },
+    methods : {
+        addKey (){
+            //this.$set(this.persons, 'sex', 'male');
+            //Vue.set(app.persons,'sex', 'male' );
+        }
+    }
+});*/
+
+/*
+let app = new Vue({
+    el : '#app',
+    data : 'targetName',
+    methods : {
+        changeName (event){
+            this.targetName = 'new name';
+            print(event.target.value == 'new name');
+        }
+    }
+});
+Vue.nextTick(()=>{
+   let input = document.querySelector('input');
+   print(input.inner)
+});
+*/
+
+let app = new Vue({
+    el : '#app'
+});
+Vue.directive

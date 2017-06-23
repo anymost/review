@@ -54,5 +54,24 @@
  *   text checkbox(单个或多个) radio select
  *   绑定value :true-value :false-value :value
  *   .lazy .number .trim
- * 
+ *
+ *  10 响应式原理
+ *  Vue.sex() this.$set() 来对已存在的data中的对象进行添加属性
+ *  Vue异步执行DOM更新，可以通过Vue.nextTick()在DOM更新之后进行操作
+ *
+ *  11 自定义指令
+ *  指令: Vue.directive
+ *  五个钩子函数
+ *  bind
+ *  inserted
+ *  update
+ *  componentUpdated
+ *  unbind
+ *
+ *  钩子函数的三个参数
+ *  el
+ *  binding
+ *  vnode
+ *  oldNode
+ *
 */
