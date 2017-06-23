@@ -60,7 +60,7 @@
  *  Vue异步执行DOM更新，可以通过Vue.nextTick()在DOM更新之后进行操作
  *
  *  11 自定义指令
- *  指令: Vue.directive
+ *  全局指令 Vue.directive 局部指令 directives
  *  五个钩子函数
  *  bind
  *  inserted
@@ -68,10 +68,15 @@
  *  componentUpdated
  *  unbind
  *
- *  钩子函数的三个参数
+ *  钩子函数的四个参数
  *  el
  *  binding
  *  vnode
  *  oldNode
+ *
+ *  12 mixin
+ *  全局mixin Vue.mixin()  局部mixin mixins
+ *  混合策略
+ *
  *
 */

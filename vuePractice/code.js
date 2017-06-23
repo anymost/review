@@ -417,6 +417,36 @@ Vue.nextTick(()=>{
 */
 
 let app = new Vue({
-    el : '#app'
+    el : '#app',
+    data : {
+        isShow : true,
+        content : ''
+    },
+    methods : {
+        changeShow (){
+            this.isShow = !this.isShow;
+        }
+    },
+    directives : {
+        direct : {
+            bind (){
+                print('bind');
+            },
+            inserted (el, binding){
+                print(el);
+                let s = JSON.stringify;
+                print(`${s(binding.name)}--${s(binding.value)}--${s(binding.expression)}--${s(binding.args)}--${s(binding.modifiers)}`)
+                print('inserted');
+            },
+            update (){
+                print('update');
+            },
+            componentUpdated (){
+                print('componentUpdated');
+            },
+            unbind (){
+                print('unbind');
+            }
+        }
+    }
 });
-Vue.directive

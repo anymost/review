@@ -167,7 +167,11 @@
         <h4 v-for="(value,key) in persons">{{value}}&#45;&#45;&#45;&#45;{{key}}</h4>
         <button @click="addKey">add key</button>
     </div>-->
-    <div id="app"></div>
+    <div id="app">
+        <input type="text" v-model="content">
+        <input type="button" value="changeShow" @click="changeShow">
+        <h5 v-if="isShow" v-direct>{{content}}</h5>
+    </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="./code.js"></script>
