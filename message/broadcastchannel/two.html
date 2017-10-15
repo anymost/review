@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>two</h2>
+<script>
+    const broadcastChannel = new BroadcastChannel('tabs')
+    broadcastChannel.addEventListener('message', event=>{
+        alert(event.data)
+    })
+</script>
+
+</body>
+</html>

@@ -29,6 +29,18 @@ class Container extends React.Component{
             <div>value is {store.getState()}</div>
         </div>
     }
+    componentWillReceiveProps(nextProps) {
+
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+
+    }
+    componentWillUpdate(nextProps, nextState) {
+
+    }
+    componentDidUpdate(prevProps, prevState) {
+        
+    }
 }
 ReactDOM.render(<Container/>, document.querySelector('#root'));
 store.subScribe(()=>{ReactDOM.render(<Container/>, document.querySelector('#root'));});

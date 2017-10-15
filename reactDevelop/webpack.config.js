@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-    entry: './server.js',
+    entry: './instruction.js',
     output: {
         path: __dirname,
         filename: 'bundle.js'

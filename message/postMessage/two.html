@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>two</h2>
+
+<script>
+    window.onmessage = (message)=>{
+        alert(JSON.stringify(message.data))
+        setTimeout(() => {
+            message.source.postMessage('HELLO ONE', message.origin)
+        }, 3000)
+    }
+</script>
+</body>
+</html>

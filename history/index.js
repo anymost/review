@@ -16,3 +16,20 @@
  *  可以然后可以在location.hash中拿到最新的hash，进行判断然后操作
  * 
  */
+
+
+//  let obj = {
+//      name: 'obj',
+//      sayName: function() {
+//          console.log(this.name);
+//      }
+//  }
+//  let sayName = obj.sayName;
+//  sayName();
+
+
+for (var i = 0; i < 10; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, 0);
+}

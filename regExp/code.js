@@ -147,3 +147,567 @@ console.log(reg.exec('<img src="hello">hello</img>'))*/
 // print(reg.exec(string));
 // print(reg.exec(string));
 // print(reg.exec(string));
+// let string = 'http://data.sankuai.com/exec/plans/634214';
+// let regExp = /http:\/\/data\.sankuai\.com\/exec\/plans\/(.+)/
+// console.log(regExp.exec(string));
+// let regExp = /^[a-z0-9_]+$/
+// let string = 'ABa'
+// console.log(regExp.test(string));
+
+// const check = value=>{
+//     if (value || (value === 0)) {
+//         console.log('ok');
+//     }
+// };
+// check(0);
+
+
+// let obj = {name: 'jack'}
+// let key = 'name';
+// delete obj[key];
+// console.log(key in obj);
+
+// function willUploadChunks() {
+//     let allChunks = [1, 2, 3, 4, 5, 6];
+//     let receivedChunks = [2, 4, 6];
+//     let willChunks = [];
+//     for(let i = 0; i < allChunks.length; i++){
+//         const item = allChunks[i];
+//         if (receivedChunks.indexOf(item) === -1) {
+//             willChunks.push(item);
+//         }
+//     }
+//     return willChunks;
+// }
+// console.log(willUploadChunks());
+
+
+// let sequences = [];
+// let chunks = [1, 2, 3];
+// for (let i = 0; i < 10; i++) {
+//     if (chunks.indexOf(i) === -1) {
+//         sequences.push(i);
+//     }
+// }
+// console.log(sequences);
+
+// function sayHello(){
+//     console.log('hello world');
+// }
+// let isOk = true;
+// isOk && sayHello();
+// let string = "http: // data.sankuai.com /exec / plans / 634214";
+// let regExp = /http:\s\/\/\sdata.sankuai.com\s\/exec\s\/\splans\s\/\s(\d+)/;
+// console.log(regExp.test(string));
+
+// console.log(isNaN(Number('hel11')));
+// let obj = {name: 'jack'};
+// console.log({...obj, age: 11});
+
+
+
+// for (var i = 0; i < 10; i++) {
+//     setTimeout(function (){
+//         console.log(i);
+//     }, 0);
+// }
+
+// // module a
+// export default {
+//     name: 'jack'
+// }
+
+
+// // module b
+// import {name} from 'a'
+
+
+// new Promise((resolve, reject)=> {
+//      reject('a');
+// }).then(value=>{
+//     console.log(value);
+// }).then(value=>{
+//     console.log(value);
+// });
+
+// new Promise((resolve, reject)=> {
+//     resolve('a');
+// }).then(value=>{
+//    console.log(b);
+// }).then(value=>{
+//    console.log(value);
+// });
+
+// function add (x, y, z) {
+//     console.log(x + y + z);
+// }
+// add.call({}, 1, 2, 3);
+// add.apply({}, [1, 2, 3]);
+
+
+// function outer() {
+//     let inner = ()=>{
+//         console.log(this);
+//     }
+//     inner();
+// }
+
+// outer();
+
+// let str = ' hello ';
+// console.log(String.);
+
+// function saveProperty(target, key, value) {
+//     Object.defineProperty(target, key, {
+//         get: function () {
+//             return
+//         }
+//     })
+// }
+
+// function observer(data) {
+//     if (!data || typeof data !== 'object') {
+//         return;
+//     }
+//     Object.keys(data).forEach((key)=>{
+//         defineReactive(data, key, data[key]);
+//     });
+// }
+// function defineReactive(target, key, value) {
+//     observer(value);
+//     Object.defineProperty(target, key,{
+//         get(){
+//             return  target[key];
+//         },
+//         set(val){
+//             console.log('change value');
+//             value = val;
+//         }
+//     })
+//
+// }
+// let obj = {
+//     name: 'jack',
+//     age: 11
+// };
+// observer(obj);
+// obj.age = 22;
+
+
+// const methods = [
+//         'pop',
+//         'push',
+//         'shift',
+//         'unshift',
+//         'reverse',
+//         'splice',
+//         'sort'
+// ];
+
+// function transformArrayMethod (array, callback) {
+//     for (let method of methods) {
+//         Array.prototype[method] = function () {
+//             Array.prototype[method].apply(this, arguments);
+//             callback({
+//                 method: method,
+//                 array: array,
+//                 args: Array.prototype.slice.call(arguments)
+//             });
+//         }
+//     }
+// }
+// let regExp = /^[a-z0-9_]+$/;
+// console.log(regExp.test('0ododod'))
+// let searchTable = {
+//     "code": 0,
+//     "message": "数据更新成功",
+//     "data": {
+//        "item": [{
+//                "tableId": "xxx",
+//                "tableName": "xxx",
+//                "securityLevel": "0:表示低 1:表示中 2:表示高",
+//                "metaTablePk": "hive::dw::dw::dim_deal",
+//                "description": "项目deal表",
+//                "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//                "tag": [{
+//                      "tagRootId": 0,
+//                      "tagRoot": "root",
+//                      "tags": [{"tagName": "name", "tagId": 0}]
+//                    }]
+//            },
+//            {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//     {
+//         "tableId": "xxx",
+//         "tableName": "xxx",
+//         "securityLevel": "0:表示低 1:表示中 2:表示高",
+//         "metaTablePk": "hive::dw::dw::dim_deal",
+//         "description": "项目deal表",
+//         "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//         "tag": [{
+//               "tagRootId": 0,
+//               "tagRoot": "root",
+//               "tags": [{"tagName": "name", "tagId": 0}]
+//             }]
+//     }
+//     ,{
+//         "tableId": "xxx",
+//         "tableName": "xxx",
+//         "securityLevel": "0:表示低 1:表示中 2:表示高",
+//         "metaTablePk": "hive::dw::dw::dim_deal",
+//         "description": "项目deal表",
+//         "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//         "tag": [{
+//             "tagRootId": 0,
+//             "tagRoot": "root",
+//             "tags": [{"tagName": "name", "tagId": 0}]
+//             }]
+//     }]
+//         },
+//        "tn": 999,
+//        "cn": 1,
+//        "pn": 10,
+//        "sn": 100
+//    }
+//
+//    let tagSearch =
+//    {
+//        "code": 0,
+//        "message": "数据更新成功",
+//        "data": {
+//            "item":[
+//                    {
+//                       "tagId":123,
+//                       "tagName":"交易",
+//                       "tableNum":54,
+//                    },
+//                    {
+//                       "tagId":113,
+//                       "tagName":"流量",
+//                       "tableNum":33,
+//                    },
+//                ],
+//            },
+//        "tn": 999,
+//        "cn": 1,
+//        "pn": 10,
+//        "sn": 30
+//    }
+
+//    let regExp = /^application\/vnd\.ms-excel$/
+//    console.log(regExp.test('application/vnd.ms-excel'))
+// console.log((/(^text\/csv$)|(^text\/plain$)|(^application\/vnd\.ms-excel$)/).test('application/vnd.ms-excel'));
+
+// let arrayOne = [1, 2, 3]
+// let arrayTwo = [4, 5, 6]
+// console.log(Array.prototype.concat.call(arrayOne, arrayTwo))
+// let array = [1, 2, 3]
+// array.pop()
+// console.log(array)
+
+
+// let obj = {
+//     name: 'obj',
+//     sayName () {
+//         console.log(this.name)
+//     }
+// };
+//
+// let sayName = obj.sayName;
+// sayName();
+
+// // module A
+// export let obj = {name: 'obj'}
+
+
+// // module B
+
+// import obj from './A'
+// let {name} = obj
+
+
+// a.g
+
+
+// let array = [1, 2, 3, 4, 5]
+// array.splice(0,2,[6,7]);
+// console.log(array)
+
+
+// name = 'obj'
+// let name;
+// console.log(name)
+
+
+// name = 'obj'
+// var name;
+// console.log(name)
+
+
+// function sayThis () {
+//     console.log(this)
+// }
+// sayThis.call(null)
+
+// async function hello() {
+//     await setTimeout(() => {
+//         console.log('timeout')
+//     })
+//     console.log('direct')
+// }
+// hello()
+// console.log(/\s/.test('hellow '))
+
+// for (var i = 0; i < 10; i++) {
+//     setTimeout(() => {
+//         console.log(i)
+//     }, 0)
+// }
+// var obj =  {
+//     name: 'obj',
+//     sayName: function () {
+//         console.log(this.name)
+//     }
+// }
+// var sayName = obj.sayName
+// sayName()
+
+// name = 'hello'
+// console.log(name)
+// var name
+// Promise.resolve('hello').
+// then( (value) => {
+//     console.log(name)
+// }).catch(value=>{
+//     console.log(value)
+// })
+
+// // module a
+// export default {
+// //     name: 'hello'
+// // }
+
+// // // module b
+// // import {name} from './a'
+
+// // var obj = {
+// //     name: 'hello',
+// //     age: 11
+// // }
+
+// //
+// // let array = [1, 2, 3]
+// // function test(array){
+// // }
+// // test(array)
+// // console.log(array)
+
+// for (var i=0;i< 10;i++) {
+//     setTimeout(()=>{
+//         console.log(i)
+//     }, 0)
+// }
+
+//  let obj = new Object();
+// Object.getPrototypeOf(obj)
+
+// let obj = {
+//     "code": 0,
+//     "message": "数据更新成功",
+//     "data": {
+//        "item": [
+//            {
+//                "tableId": "xxx",
+//                "tableName": "xxx",
+//                "securityLevel": "0:表示低 1:表示中 2:表示高",
+//                "qualityLevel": "0:表示低 1:表示中 2:表示高",
+//                "metaTablePk": "hive::dw::dw::dim_deal",
+//                "description": "项目deal表",
+//                "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//                "tagRootList": [{
+//                      "tagRootId": 0,
+//                      "tagRootName": "root",
+//                      "tagList": [{"tagName": "name", "tagId": 0}]
+//                    }]
+//            },
+//            {
+//                "tableId":"xxx",
+//                "tableName":"xxx",
+//                "securityLevel":"0:表示低 1:表示中 2:表示高",
+//                "qualityLevel":"0:表示低 1:表示中 2:表示高",
+//                "metaTablePk":"hive::dw::dw::dim_deal",
+//                "description":"项目deal表",
+//                "metaUrl":"http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//                "tagRootList":[{
+//                      "tagRootId": 0,
+//                      "tagRootName": "root",
+//                      "tagList": [{"tagName": 'name', "tagId": 0}]
+//                    }]
+//            }],
+//        "tn": 999, 
+//        "cn": 1, 
+//        "pn": 10, 
+//        "sn": 100 
+//       }
+//    }
+   
+//    console.log(JSON.stringify(obj));
+
+    
+//    let date = new Date();
+//     console.log(date.valueOf())
+// let path = '/users/brady/images/avatar/hello.jpg';
+// let reg = /.+(\/avatar\/.+$)/;
+// console.log(reg.exec(path)[1]);
+
+// let obj = {
+//     name: 'jack',
+//     sayName: function () {
+//         console.log(this.name)
+//     }
+// }
+
+// let sayName = obj.sayName;
+// sayName()
+
+
+// name = 'jack'
+// console.log(name)
+// let name;
+
+
+// let buffer = new Buffer('哈哈');
+// console.log(buffer)
+
+
+// function debounce(func, wait) {
+//     let start = new Date();
+//     let lastResult = null;
+//     return function () {
+//         let now = new Date();
+//         if (now - start < wait) {
+//             return lastResult;
+//         } else {
+//             start = now;
+//             return lastResult = func.call(this, arguments);
+//         }
+//     }
+// }
+// let result = name=>name;
+// let newFunc = debounce(result, 1)
+// console.log(newFunc('hello1'))
+// console.log(newFunc('hello2'))
+// console.log(newFunc('hello3'))
+// console.log(newFunc('hello4'))
+// console.log(newFunc('hello5'))
+// console.log(newFunc('hello6'))
+// console.log(newFunc('hello7'))
+// console.log(newFunc('hello8'))
+// console.log(newFunc('hello9'))
+// console.log(newFunc('hello10'))
+// console.log(newFunc('hello11'))
+// console.log(newFunc('hello12'))
+
+

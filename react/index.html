@@ -14,40 +14,76 @@
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 <script type="text/babel">
 
-    class Father extends React.Component{
-        constructor (props){
-            super(props)
-            this.state = {
-                name : 'jack'
-            }
-            this.handleClick = this.handleClick.bind(this);
-        }
-        handleClick (value) {
-            this.setState({name:value});
-        }
-        render () {
-            return <div>
-                <h2>{this.state.name}</h2>
-                <Son handleClick={this.handleClick}></Son>
-            </div>
-        }
-    }
-    class Son extends React.Component{
-        constructor (props){
-            super(props);
-            this.handleClick = this.handleClick.bind(this);
-        }
-        handleClick (event){
-            this.props.handleClick(event.target.value);
-        }
-        render (){
-            return <div>
-                <input type="text" onChange={this.handleClick}/>
-            </div>
+    class Button extends React.Component {
+        render() {
+            return (
+                    <button style={{background: this.context.color}}>
+                        {this.props.children}
+                    </button>
+            );
         }
     }
 
-    ReactDOM.render(<Father/>, document.querySelector('#root'));
+
+    class Message extends React.Component {
+        render() {
+            return (
+                    <div>
+                        {this.props.text} <Button>Delete</Button>
+                    </div>
+            );
+        }
+    }
+
+    class MessageList extends React.Component {
+        getChildContext() {
+            return {color: "purple"};
+        }
+
+        render() {
+            const children = this.props.messages.map((message) =>
+                    <Message text={message.text} />
+            );
+            return <div>{children}</div>;
+        }
+    }
+
+   ReactDOM.render(<MessageList messages={[{text:'one'},{text:'two'}]}/>, document.querySelector('#root'));
+
+//    class Father extends React.Component{
+//        constructor (props){
+//            super(props)
+//            this.state = {
+//                name : 'jack'
+//            }
+//            this.handleClick = this.handleClick.bind(this);
+//        }
+//        handleClick (value) {
+//            this.setState({name:value});
+//        }
+//        render () {
+//            return <div>
+//                <h2>{this.state.name}</h2>
+//                <Son handleClick={this.handleClick}></Son>
+//            </div>
+//        }
+//    }
+//    class Son extends React.Component{
+//        constructor (props){
+//            super(props);
+//            this.handleClick = this.handleClick.bind(this);
+//        }
+//        handleClick (event){
+//            this.props.handleClick(event.target.value);
+//        }
+//        render (){
+//            return <div>
+//                <input type="text" onChange={this.handleClick}/>
+//            </div>
+//        }
+//    }
+//
+//    ReactDOM.render(<Father/>, document.querySelector('#root'));
     /*
      class Clock extends React.Component {
      constructor(props) {

@@ -1,7 +1,24 @@
 /**
  * Created by lenovo on 2017/4/9.
  */
-
+/**
+ * 1 处理HTML 生成DOM树
+ * 2 处理CSS 生成CSSOM树
+ * 3 将两棵树合并成渲染树
+ * 4 根据渲染树生成布局，计算节点的几何信息
+ * 5 绘制节点
+ * 
+ * 优化CSS
+ * 1  精简
+ * 2  使用媒体查询 让文件在特定情况下执行
+ * 
+ * 优化JS
+ * defer 会立即加载 但不会立即执行 在document解析完成之后执行 触发DOMContentLoaded事件 顺序执行
+ * async 加载完成后立即执行 会阻塞load事件的执行 无序
+ * document.createElement async默认为true
+ * 
+ * 
+ */
 
 function print(value) {
     console.log(value);
@@ -30,6 +47,9 @@ Object.prototype.getType = function(value) {
             return 'object';
     }
 };
+/**
+ * 函数在定义时的词法作用域外的的地方被调用，仍能访问定义时的词法作用域
+ */
 
 /**
  * 1 声明并赋值一个变量的两个阶段
@@ -96,6 +116,9 @@ Object.prototype.getType = function(value) {
  console.log(i);
  }, 1000);
  }*/
+// for(var i=0;i<10;i++){
+//     setTimeout(()=>{console.log(i)},0);
+// }
 
 /**
  * 发生这种情况的原因是，我们认为每次循环函数中都会保存
@@ -128,10 +151,17 @@ Object.prototype.getType = function(value) {
  console.log(inner.getName());
  console.log(inner.getName());
  console.log(inner.getName());*/
+let name = ''
+let obj = {
+    name : 'jack',
+    sayName (){
+        console.log(this.name);
+    }
+}
 /**
  * 7 this
  *
- *  this是函数调用时绑定的，而不是编写时绑定的
+ *  this是函数调用时绑定的，而不是定义时绑定的
  *
  *  调用栈和调用位置
  *
@@ -200,10 +230,13 @@ Object.prototype.getType = function(value) {
  * 对象属性的[[Get]]和[[Put]]操作
  * 对象的常量属性的设定 两种
  * 存在性 in hasOwnProperty propertyIsEnumerable
- * for in Object.keys() Object.getOwnPropertyNames()
+ * 遍历 for in Object.keys() Object.getOwnPropertyNames()
  *
  *
  */
+
+// var obj2 = Object.assign({}, {a:1}, {b:2});
+// console.log(obj2.a);
 
 /*let obj = null;
  console.log(typeof obj);*/
@@ -234,6 +267,12 @@ Object.prototype.getType = function(value) {
  function Car(carName){
  Roop.call(thi)
  }*/
+
+// function Person(){
+//
+// }
+// Person.prototype.name = 'ok person';
+// console.log(Person.constructor);
 
 /***
  * 9 原型
@@ -441,7 +480,9 @@ promise.then(value=>{
 }
 let promise = Promise.resolve(thenable);
 promise.then(value=>{console.log(value);}, error=>{console.log(error)});
+
 */
+
 /**
  * 14 生成器
  * var x=1;
@@ -508,6 +549,9 @@ promise.then(value=>{console.log(value);}, error=>{console.log(error)});
  * 
  */
 
+
+
+
 /**
  * flex布局
  * display:flex|inline-flex
@@ -546,7 +590,9 @@ promise.then(value=>{console.log(value);}, error=>{console.log(error)});
  *  那么 1rem=10px;
  * 通过媒体查询的方式不同的屏幕宽度来设定不同的html下面的font-size来适配
  * @media screen and (min-width:100px) and (max-width:200px){
- *
+ *      html {
+ *          font-size:20px;
+ * }
  * }
  *
  *
@@ -737,3 +783,22 @@ print((123.5).toPrecision(1));*/
 }
 hello();
 console.log('next');*/
+
+// let myObj = {
+//     name: 'jack',
+//     sayName: function () {
+//         console.log(this.name)
+//     }
+// }
+// let sayName = myObj.sayName;
+// sayName();
+
+// name = 'jack';
+// console.log(name);
+// var name;
+
+
+new Promise(function(resolve, reject) {
+}).
+then((value)=>{})
+.then()

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>one</h2>
+<script>
+    const broadcastChannel = new BroadcastChannel('tabs')
+    setTimeout(()=>{
+        broadcastChannel.postMessage('hello two')
+    }, 5000)
+</script>
+
+</body>
+</html>

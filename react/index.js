@@ -31,12 +31,23 @@ function getJSX(name){
 
 ReactDOM.render(getJSX('hello world'),document.querySelector('#root'));*/
 
-function renderUI(){
-    "use strict";
-    const element = (<div>
-        <h2>{new Date().toLocaleTimeString()}</h2>
-    </div>);
-    ReactDOM.render(element,document.querySelector('#root'));
-}
+// function renderUI(){
+//     "use strict";
+//     const element = (<div>
+//         <h2>{new Date().toLocaleTimeString()}</h2>
+//     </div>);
+//     ReactDOM.render(element,document.querySelector('#root'));
+// }
 
-setInterval(renderUI, 1000);
+// setInterval(renderUI, 1000);
+// class Conainer extends React.Component{
+//     constructor(props) {
+//         super(props);
+//     }
+//     render() {
+//         return <div>
+//
+//         </div>
+//     }
+// }
+

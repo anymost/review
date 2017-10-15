@@ -1,0 +1,777 @@
+/**
+ * Created by lenovo on 2017/4/9.
+ */
+
+
+function print(value) {
+    console.log(value);
+}
+
+function toString(value) {
+    return Object.prototype.toString.call(value);
+}
+
+Object.prototype.getType = function(value) {
+    let string = toString(value);
+    switch (string) {
+        case '[object Undefined]':
+            return 'undefined';
+        case '[object Null]':
+            return 'null';
+        case '[object Boolean]':
+            return 'boolean';
+        case '[object Number]':
+            return 'number';
+        case '[object String]':
+            return 'string';
+        case '[object Array]':
+            return  'array';
+        default:
+            return 'object';
+    }
+};
+/**
+ * 函数在定义时的词法作用域外的的地方被调用，仍能访问定义时的词法作用域
+ */
+
+/**
+ * 1 声明并赋值一个变量的两个阶段
+ *   LHS和RHS出现的情景
+ *   LHS和RHS查找失败的结果
+ *
+ * 2 词法作用域的定义
+ *   词法作用域嵌套和查找 只会查找一级标识符
+ *   欺骗词法作用域(eval with)
+ *
+ * 3 函数作用域的作用
+ *   函数作用域的缺陷
+ *   函数声明和函数表达式的区分和区别
+ *   匿名函数表达式的优点和缺点
+ *   立即执行函数表达式
+ *
+ * 4 块级作用域
+ * with try-catch let const
+ * 不存在声明提升
+ *
+ * 5 声明提升(仅会出现(变量或函数)声明的提升 不会出现赋值的提升)
+ *  var a = 2;
+ *  var a;声明   编译阶段
+ *  a =2 ;赋值 执行阶段
+ *
+ *  函数优先 当函数和变量都发生声明提升时，函数优先
+ *
+ *
+ * 6 闭包： 函数在定义时的词法作用域外的地方被调用 还能继续访问定义时的词法作用域
+ *   类似定时器和事件处理函数，回调函数，他们也是闭包，因为调用的地方不是定义时的词法作用域
+ * function foo(){
+ *      var b = 1;
+ *      function bar(){
+ *          console.log(b);
+ *      }
+ *      return bar;
+ * }
+ * var bar = foo();
+ * 在这个函数中，foo在调用后，通常应该被GC回收掉，但是
+ * 这里却不会，因为bar需要访问foo定义的作用域，所以bar会
+ * 保持对foo这个作用域的引用，以便在调用时访问
+ *
+
+ *
+ *
+ *
+ *
+ * */
+
+/*a=1;
+ console.log(a);
+ var a;*/
+
+/*for(var i=0 ; i<10 ; i++ ){
+ (function(i) {
+ setTimeout(function () {
+ console.log(i);
+ }, 1000);
+ })(i);
+ }
+
+ for(let i=0; i<10; i++){
+ setTimeout(function () {
+ console.log(i);
+ }, 1000);
+ }*/
+// for(var i=0;i<10;i++){
+//     setTimeout(()=>{console.log(i)},0);
+// }
+
+/**
+ * 发生这种情况的原因是，我们认为每次循环函数中都会保存
+ * 一个i的副本，但是在作用域中，实际上只存在一个i，
+ * 这些函数都共享同一个全局作用域中的i，所以我们使用闭包，
+ * 为每一个函数单独创建一个作用域，然后将i传递进入，这样
+ * 每个函数都在自己的作用域中有一个单独的i会覆盖掉全局作用域
+ * 中的i
+ * let也是同理的，它会为每一个函数单独创建一个单独的块级作用域
+ */
+
+/**
+ *
+ * 闭包的作用：模拟块级作用域，创建模块
+ *
+ * 模块的定义：1 需要外部的封闭函数，并且至少调用一次
+ *          2  外部封闭函数返回一个内部的函数，这样才会形成闭包
+ */
+/*function outer(){
+ var name =1;
+ return {
+ getName:function(){
+ return name++;
+ }
+ }
+ }
+ var inner = outer();
+ console.log(inner.getName());
+ console.log(inner.getName());
+ console.log(inner.getName());
+ console.log(inner.getName());
+ console.log(inner.getName());*/
+let name = ''
+let obj = {
+    name : 'jack',
+    sayName (){
+        console.log(this.name);
+    }
+}
+/**
+ * 7 this
+ *
+ *  this是函数调用时绑定的，而不是定义时绑定的
+ *
+ *  调用栈和调用位置
+ *
+ *  this的四条绑定规则
+ *   1 默认绑定 直接调用该函数 this为window 非严格模式下
+ *   2 隐式绑定 一个对象的方法被执行 这个方法中的this指向该对象
+ *   3 显示绑定 call apply
+ *     如果传入到call和apply中的第一个参数为非对象的形式，那么就会发生装箱
+ *
+ *   4 new绑定 调用构造函数时，this指向的是新创建的实例
+ *
+ *   绑定中存在的问题： 绑定丢失
+ *      如果将一个对象的方法赋值给一个变量，或者将一个对象的方法作为一个函数
+ *      的参数传入到一个函数中执行，则会回退到默认绑定规则
+ *   解决方案：硬绑定
+ *
+ *   绑定的优先级：
+ *    new绑定 > 显式绑定 > 隐式绑定 > 默认绑定
+ *
+ *   被忽略的绑定
+ *   将null或者undefined传入到call和apply中，这个时候会被忽略掉，使用默认绑定规则
+ *   更好地方式传入一个空的对象
+ *
+ *   箭头函数：不使用this的4种绑定规则，而是根据外层的作用域来决定this
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+/* 硬绑定
+ function foo(message){
+ return message + ' ' + this.name;
+ }
+ let obj = {
+ name : "jack"
+ };
+ function bar(message){
+ "use strict";
+ console.log(foo.call(obj, message));
+ }
+ bar.call(1,  'hello');
+ */
+
+/*var name = 'john';
+ function sayName (){
+ console.log(this.name);
+ }
+ var obj = {
+ name : 'jack',
+ sayName : sayName
+ };
+ var obj2 = {
+ name : 'jones'
+ };
+ (obj2.sayName = obj.sayName)();*/
+
+/**
+ * 8 对象
+ * 对于基本类型和非基本类型，使用typeof和instanceof的区别
+ * 属性访问和键访问 var key='jack'; obj.key === obj['key'] obj[key] === obj['jack']
+ * 函数和方法并没有区别 方法不属于对象 仅仅是绑定的this
+ * 浅复制 Object.assign({},oldObj);
+ * Object.getOwnPropertyDescriptor Object.defineProperty
+ * 对象属性的[[Get]]和[[Put]]操作
+ * 对象的常量属性的设定 两种
+ * 存在性 in hasOwnProperty propertyIsEnumerable
+ * 遍历 for in Object.keys() Object.getOwnPropertyNames()
+ *
+ *
+ */
+
+// var obj2 = Object.assign({}, {a:1}, {b:2});
+// console.log(obj2.a);
+
+/*let obj = null;
+ console.log(typeof obj);*/
+/*var father = {
+ name : 'jack'
+ };
+ var son = Object.create(father);
+ son.age = 11;
+ console.log(Object.keys(son));
+ console.log(Object.getOwnPropertyNames(son));*/
+
+/*
+
+ var obj = {
+ key :'key',
+ jack : 'jack'
+ };
+ var key = 'jack';
+ console.log(obj.key);
+ console.log(obj[key]);*/
+
+
+
+/*
+ function Roop(tyreName){
+ this.tyreName = tyreName;
+ }
+ function Car(carName){
+ Roop.call(thi)
+ }*/
+
+// function Person(){
+//
+// }
+// Person.prototype.name = 'ok person';
+// console.log(Person.constructor);
+
+/***
+ * 9 原型
+ * 原型是构造函数的属性，指向一个对象，原型链的终点 Object.prototype => null
+ * 实例和构造函数获取prototype和constructor的方式  __proto__
+ * 实例的constructor和__proto__是通过prototype来索引的
+ *
+ * 向一个对象上添加属性的，该对象上不存在这个属性，则会发生四种情况：
+ * 1 原型上没有这个属性，那么在该对象自身添加该属性
+ * 2 原型上有这个属性，且不是只读的，那么会在该对象自身添加该属性
+ * 3 原型上有这个属性，且为只读的，那么无法添加该属性
+ * 4 如果原型上有这个属性，且存在setter，那么会修改原型上的属性值
+ * 可以使用Object.defineProperty来处理第三四种情况
+ *
+ * 调用构造函数实例化时并不会进行复制，各个实例与构造函数的prototype创建关联，但这是间接的
+ *
+ *
+ * 标准的原型继承
+ *  function Father(name){
+        this.name = name;
+    }
+ Father.prototype.sayName = function () {
+        console.log(this.name);
+    };
+ function Son(name, age){
+        Father.call(this,name);
+        this.age = age;
+    }
+ Son.prototype = Object.create(Father.prototype);
+
+ 此处一定要注意，不能直接为son.prototype = Father.prototype ,因为这样是直接引用
+ Father.prototype这样可能会修改Father.prototype
+ 也不能为Son.prototype = new Father()；因为这样会直接调用Father的构造函数
+ 会带来一定的副作用，
+ 所以最好的方案是赋值为Object.create(Father.prototype)
+
+ Son.prototype.constructor = Son;
+ Son.prototype.sayAge = function () {
+        console.log(this.age);
+    };
+ *
+ * instanceof 左侧为一个对象 右侧为一个函数 检查该对象的原型链中是否存在该函数对应的prototype属性
+ * isPrototypeOf 左侧为一个对象 右侧为一个对象 判断右侧对象的原型链中是否存在着左侧对象
+ *
+ *
+ *
+ */
+
+/* function Father(name){
+ this.name = name;
+ }
+ Father.prototype.sayName = function () {
+ console.log(this.name);
+ };
+ function Son (name, age){
+ Father.call(this, name);
+ this.age = age;
+ }
+ Son.prototype = Object.create(Father.prototype);
+ Son.prototype.constructor = Son;
+ Son.prototype.sayAge = function () {
+ console.log(this.age);
+ };*/
+
+
+/*
+ let array = [1, 2, 3, 4];
+ let obj = Object.create(array);
+ console.log(obj[1]);
+ obj => array => Array.prototype =>Object.prototype=>null
+ */
+/*function Foo(name){
+ this.name = name;
+ }
+
+ Foo.prototype.sayName = function () {
+ console.log(this.name);
+ };
+ var obj = new Foo('jack');
+
+ console.log(obj.constructor === Foo.prototype.constructor);
+ console.log(Object.getPrototypeOf(obj) === Foo.prototype);
+ console.log(obj.sayName === Foo.prototype.sayName);*/
+
+/*
+ function Father(name){
+ this.name = name;
+ }
+ Father.prototype.sayName = function () {
+ console.log(this.name);
+ };
+ let son = new Father('jack');
+ console.log(son.__proto__ == Father.prototype);*/
+
+/*
+ var anotherObject = {
+ cool: function() {
+ console.log( "cool!" );
+ }
+ };
+ var myObject = Object.create( anotherObject );
+ console.log(anotherObject.__proto__ == Object.prototype);*/
+/**
+ * 10 行为委托  var a={name:'jack'}  var b=Object.create(a);
+ * 原型链就是对象之间的关联关系 链接的方式 对象之间的关系
+ * 行为委托的一些特点：
+ * 1 通常将状态保存在委托者而不是委托目标上
+ * 2 不同于类机制，不使用重写方法，通常在原型链上避免使用相同的命名
+ *
+ * 禁止互相委托
+ * 典型的委托方式
+ *
+ *
+ *
+ * 行为委托不同于类机制，里面不存在类和函数的概念，跟类似于兄弟的关系，
+ * 通过对象之间创建关联，是一种更加纯粹的原型概念，
+ */
+
+
+/**
+ * 11 异步
+ * console.log()有的时候不一定会立即执行，控制台异步I/O
+ * 事件循环机制
+ * 并行：一个进程有多个线程，多个线程共享同一个进程的内存
+ * 并发： 非交互性 两个异步的‘进程’执行的顺序对结果没有影响
+ *      交互性 两个异步的‘进程’执行的顺序对结果有影响
+ *      并发协作
+ *
+ * 12 回调函数
+ * 不是同时进行 而是快速的上下文切换
+ * 控制反转
+ * 分离回调 fun(successCallback, errorCallback)
+ * error-first callback(function(error, data){});
+ *
+ */
+
+/**
+ * 13 Promise
+ * 1 三个状态 状态不可逆 pending，fullfilled，rejected
+ * 2 解决的问题：回调嵌套(顺序性)和控制反转(可信任性)
+ *
+ * 解决信任的问题：常规的回调函数foo(myCallback),我们并不清楚这个回调函数什么时候执行，
+ * 在什么地方执行，会不会执行，控制权丢失，成为控制反转
+ * promise机制：调用一个接口，返回一个事件订阅对象(promise)，在上面注册事件监听，
+ * 优点是，可以控制回调函数的执行情况(三个状态来确保)，可以在多个地方访问事件监听对象，关注点分离，
+ * 反控制反转
+ *
+ * 解决顺序性的问题：链式调用 每次调用then时都会创建返回一个新的Promise对象
+ * then中成功的回调函数返回的值作为下一个promise的resolve的值
+ * 并且这个成功的回调函数中可以返回一个Promise对象
+ * 无论当前的then执行的是成功还是失败的回调函数，下一个链接都是执行成功
+ *
+ * 3Promise 鸭式辩形 如果是一个对象或者一个函数 并且有一个then方法就是promise
+ *
+ * 4 promise总是异步调用,
+ * 决议(resolve,reject只调用一次)只有一次，
+ * 参数(resolve和reject的参数)只有一个
+ *
+ * 5 当promise中发生错误，这个时候会变成reject的状态
+ * 如果then调用中发生错误，可以在then返回的promise中捕获这个错误
+ * 如果promise的链式调用中发生错误，这个错误会随调用链进行传递，如果其中都没有被处理，
+ * 那么会有警告，通常会在调用链末端设置一个catch进行处理 catch类似于then，但只接受错误处理
+ *
+ * 6 Promise.resolve()包装返回一个promise 其中中传递普通值，promise对象，thenable对象的处理方法
+ *  Promise.reject()
+ *
+ * 7 Promise.all([]), Promise.race([]) Promise.race([promise, timeoutPromise(3000)])
+ *
+ * Promise的缺陷：
+ * 链式调用容易忽略错误处理，并且外部无法观察错误
+ *
+ */
+
+
+/**
+ * promise 三个状态
+ * promise解决的问题
+ * promise鸭式辩形
+ * promise的一些规则
+ * promise错误处理
+ * Promise.resolve() Promise.reject()
+ * Promise.all() promise.race
+ */
+/*let promise = new Promise((resolve, reject)=>{
+    throw Error('turn to reject');
+})
+promise.then(value=>{
+    console.log(`value ${value}`);
+}).then(value=>{console.log(`value ${value}`);})
+*/
+
+/*let promise = Promise.all([Promise.resolve('one'), Promise.reject('two')]);
+promise.then(value=>{
+    console.log(value);
+}, error=>{console.log(`handle error ${error}`)});
+
+*/
+/*let thenable = {
+    then : function (sucb,ercb){
+        setTimeout(()=>{
+            let num = Math.floor(Math.random()*10);
+            num > 5 ? sucb(`resolve ${num}`) : ercb(`reject ${num}`);
+        }, 2000);
+    }
+}
+let promise = Promise.resolve(thenable);
+promise.then(value=>{console.log(value);}, error=>{console.log(error)});
+
+*/
+
+/**
+ * 14 生成器
+ * var x=1;
+ * function *hello(){
+ *      x++;
+ *      yield;
+ *      console.log(x);
+ * }
+ *
+ * let generator = hello(); 创建迭代器来创建生成器的实例
+ * generator.next(); 启动生成器 在yield或return处暂停（停止）
+ *
+ * 通过yield和next建立起双向消息传递
+ * 只有处于暂停处的yield能接受next传值
+ * next调用时，询问生成器函数给它的下一个值是什么
+ *
+ * 利用yield模拟多线程竞态
+ *
+ */
+
+// function *gen (){
+//     let name = yield 'first';
+//     let age = yield 'second';
+//     console.log(`${name} ${age}`);
+// }
+// let it = gen();
+// console.log(it.next());
+// console.log(it.next('jack'));
+// console.log(it.next(22))
+ 
+// for(let item of it){
+//     console.log(item);
+// }
+
+// function *genNumbers (){
+//     let i = 0;
+//     while(i<20){
+//         yield i++;
+//     }
+// }
+// for(let item of genNumbers()){
+//     console.log(item);
+// }
+
+
+/**
+ * BFC BOX Formatting Context 
+ * Box是页面布局的对象和基本单位，根据元素的类型和diaplay来决定box的类型
+ * Formatting Context 是页面的一块渲染区域，具有一定的渲染规则，决定内部元素的定位和排列
+ * 6个规则：
+ * 1 内部的Box在垂直方向上一个接一个的排列
+ * 2 box在垂直方向上的距离由margin决定，并会发生重叠
+ * 3 margin box的左边与包含块border box的左边相接触，浮动元素也是如此
+ * 4 BFC区域不与float box相重叠
+ * 5 BFC是一个独立的容器，里面的元素不影响外界元素
+ * 6 计算BFC的高度时，浮动元素也参与计算
+ * 
+ * 5个产生BFC的情况
+ * 1 根元素
+ * 2 float不为none
+ * 3 position为fixed和absolute
+ * 4 display为inline-block
+ * 5 overflow不为visible
+ * 
+ */
+
+
+
+
+/**
+ * flex布局
+ * display:flex|inline-flex
+ * 主轴和交叉轴 容器，项目
+ * 6个容器属性
+ * flex-direction 主轴的方向 row row-reverse column column-reverse
+ * flex-wrap  如何换行 no-wrap wrap wrap-reverse
+ * flex-flow 上面两者的结合
+ * justify-content 主轴上的对齐方式 flex-start flex-end center space-between
+ * align-items 交叉轴上的对齐方式 flex-start flex-end center
+ * align-content 多根轴线的对齐方式 flex-start flex-end
+ * 
+ * 
+ * 项目的6个属性 order flex-grow flex-shrink
+ *
+ * viewport是浏览器用于展示网页的一块区域，它可能跟浏览器的可视区域大小不同，
+ * 通常移动设备上的viewport的宽度是要大于浏览器可视区域的宽度的，因为针对pc
+ * 的网页宽度较大，放在移动设备上会挤成一团，因此将宽度设大，会产生滚动条
+ * 在移动设备上css的一个像素不等于一个物理像素，有一个值window.devicePixelRation
+ * 来描述物理像素和CSS像素的比值
+ * 
+ * 三个viewport
+ * layout viewport 浏览器用于展示网页的viewport 通常宽度大于可视区域宽度 clientWidth
+ * visual viewport 浏览器可视区域 innerWidth
+ * ideal viewport 最佳显示效果  宽度为 物理像素宽度/window.devicePixelRatio
+ * 
+ * <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,
+ * user-scalable=0">
+ * 
+ *  
+ *
+ *  rem 通过为html元素的字体大小设定的值 例如
+ *  html{
+ *      font-size:10px;
+ *  }
+ *  那么 1rem=10px;
+ * 通过媒体查询的方式不同的屏幕宽度来设定不同的html下面的font-size来适配
+ * @media screen and (min-width:100px) and (max-width:200px){
+ *      html {
+ *          font-size:20px;
+ * }
+ * }
+ *
+ *
+ *
+ */
+
+
+
+/**
+ * transition作用在css属性上
+ * transition-property transition-delay transition-duration
+ * transition:property duration time-function delay
+ *
+ *
+ * animation通过关键帧技术精细控制 关键帧会调用css对象模型接口
+ * animation-name animation-duration animation-delay animation-timing-function
+ */
+
+/**
+ * js数据类型调用toString()方法
+ * null undefined true false number string
+ * 对object调用toString方法时，
+ * 首先查看该对象是否重新定义了toString方法，有则调用
+ * 没有则访问[[class]]内部属性 然后打印
+ *
+ * JSON.stringify 不能对undefined,function,循环引用调用
+ * 对于合法的值会返回字符串，
+ * 如果该对象有toJSON方法，则调用 toJSON应该返回一个能被安全字符串化的值
+ * 如果没有，转换成字符串
+ *
+ *
+ *
+ */
+
+/**
+ * toNumber
+ * true 1
+ * false 0
+ * null 0
+ * undefined NaN
+ * 对于对象来说 toNumber()
+ * 如果有valueOf() 则调用
+ * 如果有toString（） 则调用
+ *
+ */
+
+/**
+ * toBoolean()
+ * 假值: null undefined false 0 NaN ''
+ * 假值对象:假值对象为真
+ * 所有的字符串 除了空字符串外都是真值
+ * 空数组 空对象 空函数都是真值
+ *
+ */
+
+
+/**
+ * 字符串和数字互相转换
+ * 显式转换 Number() String()
+ * 隐式转化 +'42'  42+'' +new Date()
+ *
+ *
+ * 显式解析数字和字符串
+ * parseInt 字符串末尾中可以包含非数字
+ * Number 字符串中不能包含非数字
+ *
+ * 转换成bool值
+ * Boolean()
+ * !!
+ *
+ *
+ *
+ * || && 不应该叫逻辑运算符，而应该叫选择器运算符
+ * 返回两个值中的一个
+ * ||  =   a ? a : b
+ * &&  =   a ? b : a
+ *
+ * 隐式的布尔值转换
+ * if for while (&& ||) (? :)
+ *
+ *
+ */
+
+/*function foo (){
+    try{
+        return 'foo'
+    }finally {
+        throw error('finally');
+    }
+}
+console.log(foo());*/
+
+/*console.log('hello \'world\' hahaha');
+console.log('<h1  class="hello world" name="world\'hello"></h1>')
+*/
+
+/*var d = a && ( b || (c ? (c || b ? a) : c && b : a));*/
+
+/*
+print(new Boolean(false) && true);*/
+
+
+/*
+ function isNaN (num){
+ return typeof num == 'number' && ((typeof window !== 'undefined' && window.isNaN(num))||num !== num);
+ }
+ console.log(isNaN(1/'hello'));*/
+
+
+/*
+ print(Object.is('hello', 'hello'));*/
+/*var a = 1;
+ var b=a;
+ b = 2;
+ print(a);
+ print(b);
+ var c = [1, 2, 3];
+ var d = c;
+ d = [3, 4, 5];
+ print(c);
+ print(d);*/
+/*var e = [1, 2, 3];
+ var f = e;
+ f[0] = 5;
+ console.log(e);
+ console.log(f);*/
+
+/*
+ function foo(x){
+ x.push(4);
+ x = [1, 2, 3];
+ x.push(7);
+ }
+ var array = [1, 2, 3];
+ foo(array);
+ print(array);*/
+
+/*
+ function foo(x) {
+ x.push(4);
+ x.length = 0;
+ x.push(5, 6, 7, 8);
+ }
+ let array = [1, 2, 3];
+ foo(array);
+ print(array);*/
+/*
+
+ function foo(obj) {
+ if(typeof obj !== 'undefined'){
+ obj.x = 2;
+ }
+ }
+ let obj = {x : 1};
+ foo(obj);
+ print(obj);*/
+/*let array = [1, 2, 3];
+ console.log(array.slice());
+ Object.assign*/
+
+
+
+
+/*
+print(toString(/^\d$/));*/
+
+//let string = new String('hello');
+/*
+print(typeof string);
+print(string instanceof String);*/
+//print(string.valueOf());
+
+/*
+print(new Date().getTime());
+print(Date.now());*/
+
+/*
+print((123.5).toPrecision(1));*/
+//print(Function.prototype.call.toString())
+
+//print((function hello(){}).toString());
+
+
+
+/*
+ function hello(){
+    setTimeout(async ()=>{await print('await')},2000);
+}
+hello();
+console.log('next');*/
+
+let obj = {
+    name: 'jack',
+    sayName: function () {
+        console.log(this.name)
+    }
+}
+let sayName = obj.sayName;
+sayName();

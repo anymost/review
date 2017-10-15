@@ -121,3 +121,31 @@ async function handleFile (){
 handleFile();
 
 
+
+async function hello(){
+    try{
+        let result = await new Promise((resolve, reject)=>{
+            setTimeout(()=>{resolve('first value')},1000);
+        })
+        console.log(result);
+        let nextResult = await Promise.resolve(`${result} second value`);
+        console.log(nextResult);
+        let lastResult = await Promise.resolve(`${nextResult} last value`);
+        console.log(lastResult);
+        return lastResult;   /**
+         * 这里类似promise的链式调用的处理方式
+         * 如果返回的值是value，就会使用Promise.resolve将其包装成Promise对象
+         * 如果是Promise类型的，则直接返回该值
+         *
+         * 这里返回的本来是一个string，async会将其包装成Promise
+         */
+    }catch(e){
+        console.log(e);
+    }
+}
+let me = hello();
+me.then((value)=>{
+    console.log(value);
+})
+
+

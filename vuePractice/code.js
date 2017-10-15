@@ -429,24 +429,29 @@ let app = new Vue({
     },
     directives : {
         direct : {
-            bind (){
-                print('bind');
-            },
-            inserted (el, binding){
-                print(el);
-                let s = JSON.stringify;
-                print(`${s(binding.name)}--${s(binding.value)}--${s(binding.expression)}--${s(binding.args)}--${s(binding.modifiers)}`)
-                print('inserted');
-            },
-            update (){
-                print('update');
-            },
-            componentUpdated (){
-                print('componentUpdated');
-            },
-            unbind (){
-                print('unbind');
-            }
+           bind(el, bind,) {
+
+           },
+           inserted() {
+
+           },
+           update() {
+
+           },
+           componentUpdated() {
+
+           },
+           unbind() {
+
+           }
         }
     }
 });
+/**
+ * bind
+ * inserted
+ * update 
+ * componentUpdated
+ * 
+ * 
+ */

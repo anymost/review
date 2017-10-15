@@ -1,9 +1,5 @@
 // @flow
-
-let str: string = 'hello world';
-console.log(str);
-
-let name:function = function(){
-    "use strict";
-
-}
+ function sayHello (name: string) {
+     console.log(name);
+ }
+ sayHello(1);

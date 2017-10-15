@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>one</h2>
+<script>
+    const to = window.open('./two.html', 'child')
+    setTimeout(() => {
+            to.postMessage('hello two', 'http://localhost:63342/review/message/postMessage/two.html')
+        }, 3000)
+
+    window.addEventListener('message', (event)=>{
+        alert(event.data)
+    })
+</script>
+
+</body>
+</html>

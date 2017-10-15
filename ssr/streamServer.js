@@ -4,7 +4,7 @@ var path = require('path')
 // 定义全局的Vue为了服务端的app.js
 global.Vue = require('vue')
 // 获取HTML布局
-var layout = fs.readFileSync('./index.html', 'utf8')
+var layout = fs.readFileSync('./index.ejs', 'utf8')
 var layoutSections = layout.split('<div id="app"></div>')
 var preAppHTML = layoutSections[0];
 var postAppHTML = layoutSections[1];

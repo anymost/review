@@ -7,7 +7,7 @@ var path = require('path')
 // 定义全局的Vue为了服务端的app.js
 global.Vue = require('vue')
 // 获取HTML布局
-var layout = fs.readFileSync('./index.html', 'utf8')
+var layout = fs.readFileSync('./index.ejs', 'utf8')
 // 创建一个渲染器
 var renderer = require('vue-server-renderer').createRenderer()
 // 创建一个Express服务器

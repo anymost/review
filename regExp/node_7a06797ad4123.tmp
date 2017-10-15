@@ -1,0 +1,715 @@
+/**
+ * Created by lenovo on 2017/5/13.
+ */
+function print (value){
+    console.log(value);
+}
+/*
+console.log('abc 123 '.replace(/\d/g, 'h'));
+
+
+console.log('123abc'.search(/\S/));
+console.log('1012345678'.match(/1[34578]\d{9}|0\d{10,11}/));
+console.log('creatuture@gmail.com'.search(/\w+@\w+\.\w+/));*/
+
+/*
+console.log('123456'.match(/\d/g));*/
+//console.log('18844548962'.match(/^1[34578]\d{9}$/));
+/*
+let reg = new RegExp('^1[34578]\\d{9}$|^0\\d{10,11}$');
+console.log(reg.exec('01018844541'))
+console.log(reg.source);*/
+
+/*
+let reg = new RegExp('^\\w+\\s+\\w+@\\w+\\.\\w+$');
+console.log(reg.exec('creatu  ture@gmail.com'));*/
+/*
+let string = '<img src="https://www.google.com/index.jpg">';
+let reg = new RegExp('<img\\s+src=".+">');
+console.log(reg.test(string));*/
+/*let reg = new RegExp('\\d','g');
+console.log(reg.exec('h1l2o'));*/
+/*
+console.log('h1a2g3b4'.match(/\d+/g));*/
+
+/*let reg = /"\w+"/;
+console.log(reg.exec('"hello"'));*/
+
+
+/*let reg = /a{1}b/;
+console.log(reg.exec('aaab'));*/
+
+/*
+let reg = /java(script)?/;
+console.log(reg.exec('javascript'));*/
+/*
+let reg = new RegExp('^java(script)?$');
+console.log(reg.exec('javascript'));*/
+/*let reg = /java(\d\.\d)/;
+console.log(reg.exec('java1.2'));*/
+/*let reg = /java(\d+\.\d+)\spython(\d+\.\d+)\sruby(\d+\.\d+)/;
+console.log(reg.exec('java11.2 python2.7 ruby1.9'));*/
+
+/*let reg = /(['"])[^'"]+\1/;
+console.log(reg.exec("'hello world'"));*/
+/*
+let reg = /<img\ssrc="(.+)".*>/;
+console.log(reg.exec('<img src="hello.jpg">')[1]);*/
+
+/*
+let reg = /\d/g;
+let string = '1a2b3c4d5e6f7g';
+console.log(reg.exec(string));
+console.log(reg.exec(string));
+console.log(reg.exec(string));
+console.log(reg.exec(string));*/
+/*
+let reg = /^\w+@(\w+)\.\w+#\1/;
+console.log(reg.exec('creatuture@gmail.com#gmail'));*/
+/*let http = require('http');
+let content = http.get({
+    url : 'http://movie.douban.com',
+    'User-Agent' : ''
+});
+content.on('data', function (data){
+   console.log(data);
+});*/
+/*
+let reg = /<img\ssrc="(\S+)"\s.+/;
+let string = '<img src="https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2453433569.webp" alt="亚瑟王：斗兽争霸" rel="nofollow" class="">'
+
+console.log(reg.exec(string)[1]);*/
+/*let userAgentOne = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36'
+let userAgentTwo = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+let userAgentThree = 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Mobile Safari/537.36'
+let userAgentFour = 'Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13'
+let userAgentFive = 'Mozilla/5.0 (BB10; Touch) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.0.9.2372 Mobile Safari/537.10+'
+let userAgentSix = 'Mozilla/5.0 (Linux; U; en-us; KFAPWI Build/JDQ39) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.13 Safari/535.19 Silk-Accelerated=true'
+let reg = /.+\((.+)\).+\((.+)\).+/
+console.log(reg.exec(userAgentOne));*/
+//let reg = /.+\/\d\.\d\s+\((.+)\)\s+Apple.+/
+/*console.log(reg.exec(userAgentOne)[1]);
+console.log(reg.exec(userAgentTwo)[1]);
+console.log(reg.exec(userAgentThree)[1]);
+console.log(reg.exec(userAgentFour)[1]);
+console.log(reg.exec(userAgentFive)[1])
+console.log(reg.exec(userAgentSix)[1])*/
+
+/*let reg = /java(script)+/g
+let string = 'javascriptscriptscript';
+console.log(reg.exec(string));
+console.log(reg.exec(string));
+console.log(reg.exec(string));*/
+/*
+let reg = /((script)+)java\2/
+
+let string = 'scriptscriptjavascript';
+console.log(reg.exec(string));*/
+/*
+/^https?:\/\/(([0-9A-Za-z])+(\.)?)+(:\d+)?(\/\w+)*(\?((\w+=\w+)&?)*)?(#\w+)?$/*/
+
+/*let reg = /<(\S+)\s*.*>.*<\/\1>/;
+console.log(reg.exec('<img src="hello">hello</img>'))*/
+// let string = 'hello world';
+//console.log(string.search(/\s/));
+// print(string.replace(/\w{3}/g, 'SOS'));
+
+// let reg = /\d{2}/gim;
+// let string = '22hh33dd44uu55kk'
+// print(reg.exec(string));
+// print(reg.test(string));
+// print(reg.source);
+// print(reg.global);
+// print(reg.multiline);
+// print(reg.ignoreCase);
+// print(reg.lastIndex);
+
+// let string = `dddddddd 
+
+// hello`;
+// let reg = /\b/g;
+// print(reg.exec(string));
+// print(reg.exec(string));
+
+// let string = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36';
+
+// let regTwo = /\s\((.*?)\)\s/g
+// print(regTwo.exec(string));
+// print(regTwo.exec(string));
+
+
+// let string = 'BAIDUID=D70CFA7F0F00EE3BF65C1563D1C2419D:FG=1; BIDUPSID=D70CFA7F0F00EE3BF65C1563D1C2419D; PSTM=1494748304; BDUSS=XNoU2RDRVU5TEExVlFNfllZYVV3VFB1bVBpUWRmTEl4MlpMZkZIbC1-emNpRUJaSVFBQUFBJCQAAAAAAAAAAAEAAACqC24veWVhcs7wzfxf0MSwsgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANz7GFnc-xhZc; ispeed_lsm=0; BD_HOME=1; BD_UPN=12314753; H_PS_645EC=ea799bhNa6k%2FkrjrrLyVJWdKAWofyZDXCL6x02lsxpLOWD%2Bip2pTRcOOVK3F5OFFSAgO; BDRCVFR[feWj1Vr5u3D]=I67x6TjHwwYf0; BD_CK_SAM=1; PSINO=1; BDSVRTM=19; H_PS_PSSID=1447_21120_20719'
+// string = `${string}; `;
+// let reg = /(.*?)=(.*?);\s+?/g
+// print(reg.exec(string));
+// print(reg.exec(string));
+// print(reg.exec(string));
+// print(reg.exec(string));
+// print(reg.exec(string));
+// print(reg.exec(string));
+// let string = 'http://data.sankuai.com/exec/plans/634214';
+// let regExp = /http:\/\/data\.sankuai\.com\/exec\/plans\/(.+)/
+// console.log(regExp.exec(string));
+// let regExp = /^[a-z0-9_]+$/
+// let string = 'ABa'
+// console.log(regExp.test(string));
+
+// const check = value=>{
+//     if (value || (value === 0)) {
+//         console.log('ok');
+//     }
+// };
+// check(0);
+
+
+// let obj = {name: 'jack'}
+// let key = 'name';
+// delete obj[key];
+// console.log(key in obj);
+
+// function willUploadChunks() {
+//     let allChunks = [1, 2, 3, 4, 5, 6];
+//     let receivedChunks = [2, 4, 6];
+//     let willChunks = [];
+//     for(let i = 0; i < allChunks.length; i++){
+//         const item = allChunks[i];
+//         if (receivedChunks.indexOf(item) === -1) {
+//             willChunks.push(item);
+//         }
+//     }
+//     return willChunks;
+// }
+// console.log(willUploadChunks());
+
+
+// let sequences = [];
+// let chunks = [1, 2, 3];
+// for (let i = 0; i < 10; i++) {
+//     if (chunks.indexOf(i) === -1) {
+//         sequences.push(i);
+//     }
+// }
+// console.log(sequences);
+
+// function sayHello(){
+//     console.log('hello world');
+// }
+// let isOk = true;
+// isOk && sayHello();
+// let string = "http: // data.sankuai.com /exec / plans / 634214";
+// let regExp = /http:\s\/\/\sdata.sankuai.com\s\/exec\s\/\splans\s\/\s(\d+)/;
+// console.log(regExp.test(string));
+
+// console.log(isNaN(Number('hel11')));
+// let obj = {name: 'jack'};
+// console.log({...obj, age: 11});
+
+
+
+// for (var i = 0; i < 10; i++) {
+//     setTimeout(function (){
+//         console.log(i);
+//     }, 0);
+// }
+
+// // module a
+// export default {
+//     name: 'jack'
+// }
+
+
+// // module b
+// import {name} from 'a'
+
+
+// new Promise((resolve, reject)=> {
+//      reject('a');
+// }).then(value=>{
+//     console.log(value);
+// }).then(value=>{
+//     console.log(value);
+// });
+
+// new Promise((resolve, reject)=> {
+//     resolve('a');
+// }).then(value=>{
+//    console.log(b);
+// }).then(value=>{
+//    console.log(value);
+// });
+
+// function add (x, y, z) {
+//     console.log(x + y + z);
+// }
+// add.call({}, 1, 2, 3);
+// add.apply({}, [1, 2, 3]);
+
+
+// function outer() {
+//     let inner = ()=>{
+//         console.log(this);
+//     }
+//     inner();
+// }
+
+// outer();
+
+// let str = ' hello ';
+// console.log(String.);
+
+// function saveProperty(target, key, value) {
+//     Object.defineProperty(target, key, {
+//         get: function () {
+//             return
+//         }
+//     })
+// }
+
+// function observer(data) {
+//     if (!data || typeof data !== 'object') {
+//         return;
+//     }
+//     Object.keys(data).forEach((key)=>{
+//         defineReactive(data, key, data[key]);
+//     });
+// }
+// function defineReactive(target, key, value) {
+//     observer(value);
+//     Object.defineProperty(target, key,{
+//         get(){
+//             return  target[key];
+//         },
+//         set(val){
+//             console.log('change value');
+//             value = val;
+//         }
+//     })
+//
+// }
+// let obj = {
+//     name: 'jack',
+//     age: 11
+// };
+// observer(obj);
+// obj.age = 22;
+
+
+// const methods = [
+//         'pop',
+//         'push',
+//         'shift',
+//         'unshift',
+//         'reverse',
+//         'splice',
+//         'sort'
+// ];
+
+// function transformArrayMethod (array, callback) {
+//     for (let method of methods) {
+//         Array.prototype[method] = function () {
+//             Array.prototype[method].apply(this, arguments);
+//             callback({
+//                 method: method,
+//                 array: array,
+//                 args: Array.prototype.slice.call(arguments)
+//             });
+//         }
+//     }
+// }
+// let regExp = /^[a-z0-9_]+$/;
+// console.log(regExp.test('0ododod'))
+// let searchTable = {
+//     "code": 0,
+//     "message": "数据更新成功",
+//     "data": {
+//        "item": [{
+//                "tableId": "xxx",
+//                "tableName": "xxx",
+//                "securityLevel": "0:表示低 1:表示中 2:表示高",
+//                "metaTablePk": "hive::dw::dw::dim_deal",
+//                "description": "项目deal表",
+//                "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//                "tag": [{
+//                      "tagRootId": 0,
+//                      "tagRoot": "root",
+//                      "tags": [{"tagName": "name", "tagId": 0}]
+//                    }]
+//            },
+//            {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//         {
+//             "tableId": "xxx",
+//             "tableName": "xxx",
+//             "securityLevel": "0:表示低 1:表示中 2:表示高",
+//             "metaTablePk": "hive::dw::dw::dim_deal",
+//             "description": "项目deal表",
+//             "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//             "tag": [{
+//                   "tagRootId": 0,
+//                   "tagRoot": "root",
+//                   "tags": [{"tagName": "name", "tagId": 0}]
+//                 }]
+//         },
+//     {
+//         "tableId": "xxx",
+//         "tableName": "xxx",
+//         "securityLevel": "0:表示低 1:表示中 2:表示高",
+//         "metaTablePk": "hive::dw::dw::dim_deal",
+//         "description": "项目deal表",
+//         "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//         "tag": [{
+//               "tagRootId": 0,
+//               "tagRoot": "root",
+//               "tags": [{"tagName": "name", "tagId": 0}]
+//             }]
+//     }
+//     ,{
+//         "tableId": "xxx",
+//         "tableName": "xxx",
+//         "securityLevel": "0:表示低 1:表示中 2:表示高",
+//         "metaTablePk": "hive::dw::dw::dim_deal",
+//         "description": "项目deal表",
+//         "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//         "tag": [{
+//             "tagRootId": 0,
+//             "tagRoot": "root",
+//             "tags": [{"tagName": "name", "tagId": 0}]
+//             }]
+//     }]
+//         },
+//        "tn": 999,
+//        "cn": 1,
+//        "pn": 10,
+//        "sn": 100
+//    }
+//
+//    let tagSearch =
+//    {
+//        "code": 0,
+//        "message": "数据更新成功",
+//        "data": {
+//            "item":[
+//                    {
+//                       "tagId":123,
+//                       "tagName":"交易",
+//                       "tableNum":54,
+//                    },
+//                    {
+//                       "tagId":113,
+//                       "tagName":"流量",
+//                       "tableNum":33,
+//                    },
+//                ],
+//            },
+//        "tn": 999,
+//        "cn": 1,
+//        "pn": 10,
+//        "sn": 30
+//    }
+
+//    let regExp = /^application\/vnd\.ms-excel$/
+//    console.log(regExp.test('application/vnd.ms-excel'))
+// console.log((/(^text\/csv$)|(^text\/plain$)|(^application\/vnd\.ms-excel$)/).test('application/vnd.ms-excel'));
+
+// let arrayOne = [1, 2, 3]
+// let arrayTwo = [4, 5, 6]
+// console.log(Array.prototype.concat.call(arrayOne, arrayTwo))
+// let array = [1, 2, 3]
+// array.pop()
+// console.log(array)
+
+
+// let obj = {
+//     name: 'obj',
+//     sayName () {
+//         console.log(this.name)
+//     }
+// };
+//
+// let sayName = obj.sayName;
+// sayName();
+
+// // module A
+// export let obj = {name: 'obj'}
+
+
+// // module B
+
+// import obj from './A'
+// let {name} = obj
+
+
+// a.g
+
+
+// let array = [1, 2, 3, 4, 5]
+// array.splice(0,2,[6,7]);
+// console.log(array)
+
+
+// name = 'obj'
+// let name;
+// console.log(name)
+
+
+// name = 'obj'
+// var name;
+// console.log(name)
+
+
+// function sayThis () {
+//     console.log(this)
+// }
+// sayThis.call(null)
+
+// async function hello() {
+//     await setTimeout(() => {
+//         console.log('timeout')
+//     })
+//     console.log('direct')
+// }
+// hello()
+// console.log(/\s/.test('hellow '))
+
+// for (var i = 0; i < 10; i++) {
+//     setTimeout(() => {
+//         console.log(i)
+//     }, 0)
+// }
+// var obj =  {
+//     name: 'obj',
+//     sayName: function () {
+//         console.log(this.name)
+//     }
+// }
+// var sayName = obj.sayName
+// sayName()
+
+// name = 'hello'
+// console.log(name)
+// var name
+// Promise.resolve('hello').
+// then( (value) => {
+//     console.log(name)
+// }).catch(value=>{
+//     console.log(value)
+// })
+
+// // module a
+// export default {
+// //     name: 'hello'
+// // }
+
+// // // module b
+// // import {name} from './a'
+
+// // var obj = {
+// //     name: 'hello',
+// //     age: 11
+// // }
+
+// //
+// // let array = [1, 2, 3]
+// // function test(array){
+// // }
+// // test(array)
+// // console.log(array)
+
+// for (var i=0;i< 10;i++) {
+//     setTimeout(()=>{
+//         console.log(i)
+//     }, 0)
+// }
+
+//  let obj = new Object();
+// Object.getPrototypeOf(obj)
+
+// let obj = {
+//     "code": 0,
+//     "message": "数据更新成功",
+//     "data": {
+//        "item": [
+//            {
+//                "tableId": "xxx",
+//                "tableName": "xxx",
+//                "securityLevel": "0:表示低 1:表示中 2:表示高",
+//                "qualityLevel": "0:表示低 1:表示中 2:表示高",
+//                "metaTablePk": "hive::dw::dw::dim_deal",
+//                "description": "项目deal表",
+//                "metaUrl": "http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//                "tagRootList": [{
+//                      "tagRootId": 0,
+//                      "tagRootName": "root",
+//                      "tagList": [{"tagName": "name", "tagId": 0}]
+//                    }]
+//            },
+//            {
+//                "tableId":"xxx",
+//                "tableName":"xxx",
+//                "securityLevel":"0:表示低 1:表示中 2:表示高",
+//                "qualityLevel":"0:表示低 1:表示中 2:表示高",
+//                "metaTablePk":"hive::dw::dw::dim_deal",
+//                "description":"项目deal表",
+//                "metaUrl":"http://meta.sankuai.com/detail/hive::dw::dw::dim_deal",
+//                "tagRootList":[{
+//                      "tagRootId": 0,
+//                      "tagRootName": "root",
+//                      "tagList": [{"tagName": 'name', "tagId": 0}]
+//                    }]
+//            }],
+//        "tn": 999, 
+//        "cn": 1, 
+//        "pn": 10, 
+//        "sn": 100 
+//       }
+//    }
+   
+//    console.log(JSON.stringify(obj));
+
+    
+//    let date = new Date();
+//     console.log(date.valueOf())
+// let path = '/users/brady/images/avatar/hello.jpg';
+// let reg = /.+(\/avatar\/.+$)/;
+// console.log(reg.exec(path)[1]);
+
+// let obj = {
+//     name: 'jack',
+//     sayName: function () {
+//         console.log(this.name)
+//     }
+// }
+
+// let sayName = obj.sayName;
+// sayName()
+
+
+// name = 'jack'
+// console.log(name)
+// let name;
+
+
+// let buffer = new Buffer('哈哈');
+// console.log(buffer)
+
+
+// function debounce(func, wait) {
+//     let start = new Date();
+//     let lastResult = null;
+//     return function () {
+//         let now = new Date();
+//         if (now - start < wait) {
+//             return lastResult;
+//         } else {
+//             start = now;
+//             return lastResult = func.call(this, arguments);
+//         }
+//     }
+// }
+// let result = name=>name;
+// let newFunc = debounce(result, 1)
+// console.log(newFunc('hello1'))
+// console.log(newFunc('hello2'))
+// console.log(newFunc('hello3'))
+// console.log(newFunc('hello4'))
+// console.log(newFunc('hello5'))
+// console.log(newFunc('hello6'))
+// console.log(newFunc('hello7'))
+// console.log(newFunc('hello8'))
+// console.log(newFunc('hello9'))
+// console.log(newFunc('hello10'))
+// console.log(newFunc('hello11'))
+// console.log(newFunc('hello12'))
+
+let tags = "1507862257981|[{"id":3,"name":"ARPU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":4,"name":"B1(主题层)","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":5,"name":"B2(轻度汇总层)","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":6,"name":"B3(明细层）","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":7,"name":"BD","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":8,"name":"CTR","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":9,"name":"DAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":10,"name":"GA","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":11,"name":"GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":12,"name":"GMV/交易额","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":13,"name":"IPH在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":14,"name":"IPH指标","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":15,"name":"MAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":16,"name":"MV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":17,"name":"PC","description":"包括pc","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":18,"name":"PV","description":"包括pv等","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":19,"name":"Take Rate","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":20,"name":"UTC","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":21,"name":"UV","description":"包括uv等","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":22,"name":"android","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":23,"name":"bd","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":24,"name":"dpid","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":25,"name":"ip","description":"注意IP","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":26,"name":"mac","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":27,"name":"sku","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":28,"name":"stid","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":29,"name":"union_id","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":30,"name":"url","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":31,"name":"uuid","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":32,"name":"wifi","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":33,"name":"一次解决工单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":34,"name":"一次解决工单率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":35,"name":"一级品类","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":36,"name":"上报","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":37,"name":"上海平台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":38,"name":"下单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":39,"name":"下单用户数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":40,"name":"不满率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":41,"name":"不满率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":42,"name":"专题","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":44,"name":"买单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":46,"name":"二维码","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":47,"name":"交易","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":48,"name":"交易Take Rate","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":49,"name":"交易收入","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":50,"name":"交易毛利率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":51,"name":"人员利用率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":52,"name":"人工接起量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":53,"name":"人工接通率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":54,"name":"人工有效对话量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":55,"name":"人工有效服务量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":56,"name":"人工进线量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":57,"name":"付款","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":58,"name":"代理商","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":59,"name":"代金券","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":60,"name":"价格","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":61,"name":"优惠","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":62,"name":"会员","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":63,"name":"伪重开数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":64,"name":"伪重开率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":65,"name":"位置","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":66,"name":"住宿","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":67,"name":"余额","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":68,"name":"作弊","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":69,"name":"佣金","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":70,"name":"供应商","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":71,"name":"供应链","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":72,"name":"促销","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":73,"name":"保险","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":74,"name":"偏好","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":75,"name":"充值","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":76,"name":"入口","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":77,"name":"入库","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":78,"name":"全国","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":79,"name":"关单平均超时时长 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":80,"name":"关单次数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":81,"name":"关键词","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":82,"name":"出票","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":83,"name":"列表","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":84,"name":"到店综合","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":85,"name":"到店餐饮","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":86,"name":"到综GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":87,"name":"到综动销POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":88,"name":"到综在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":89,"name":"到综在线首次合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":90,"name":"到综补贴费用","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":91,"name":"到综订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":92,"name":"到综购买意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":93,"name":"到餐GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":94,"name":"到餐动销POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":95,"name":"到餐在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":96,"name":"到餐在线首次合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":97,"name":"到餐补贴费用","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":98,"name":"到餐订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":99,"name":"到餐购买意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":100,"name":"前台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":101,"name":"动销POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":102,"name":"包裹","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":103,"name":"包销","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":104,"name":"北京平台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":105,"name":"协议","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":106,"name":"单工单联络次数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":107,"name":"参评率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":108,"name":"反馈","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":109,"name":"发票","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":110,"name":"取消","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":111,"name":"召回","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":112,"name":"司机","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":113,"name":"合同","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":114,"name":"同比","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":115,"name":"后台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":116,"name":"启动","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":117,"name":"员工","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":118,"name":"员工数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":119,"name":"周末","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":120,"name":"品牌","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":121,"name":"品类","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":122,"name":"品类数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":123,"name":"售卖","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":124,"name":"售票量","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":125,"name":"商品","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":126,"name":"商圈","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":127,"name":"商户","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":128,"name":"回复","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":129,"name":"回访","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":130,"name":"团单/Deal","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":131,"name":"团单/deal","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":132,"name":"团购","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":133,"name":"图片","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":134,"name":"在线chat","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":135,"name":"在线人数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":136,"name":"在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":137,"name":"地图","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":138,"name":"地址","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":139,"name":"地理","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":140,"name":"坐标","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":141,"name":"城市","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":142,"name":"城市数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":143,"name":"处罚","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":144,"name":"外卖","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":145,"name":"外卖APP","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":146,"name":"外卖APP DAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":147,"name":"外卖APP MAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":148,"name":"外卖C端补贴(美团承担)","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":149,"name":"外卖GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":150,"name":"外卖列表页广告收入","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":151,"name":"外卖动销POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":152,"name":"外卖在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":153,"name":"外卖在线首次合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":154,"name":"外卖订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":155,"name":"外卖购买意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":156,"name":"外卖配送补贴费用","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":157,"name":"外呼成功量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":158,"name":"外呼量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":159,"name":"天气","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":160,"name":"套餐","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":161,"name":"好评","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":162,"name":"姓名","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":163,"name":"学校","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":164,"name":"定位","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":165,"name":"实时","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":166,"name":"审批","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":167,"name":"审核","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":168,"name":"客户","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":169,"name":"客户端","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":170,"name":"客服指标","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":171,"name":"客服标签","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":172,"name":"对账","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":173,"name":"导入","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":174,"name":"封禁","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":175,"name":"小时","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":176,"name":"展示","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":177,"name":"工单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":178,"name":"工单任务数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":179,"name":"工单创建量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":180,"name":"工单重开数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":181,"name":"市场份额","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":182,"name":"帐号","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":183,"name":"平台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":184,"name":"平均流转节点数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":185,"name":"平均结案时长 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":186,"name":"平均重开次数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":187,"name":"广告","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":188,"name":"广告收入","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":189,"name":"库存","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":190,"name":"异地","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":191,"name":"异常","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":192,"name":"影片","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":193,"name":"影院","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":194,"name":"微信","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":195,"name":"性别","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":196,"name":"总用户补贴","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":197,"name":"总进线量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":198,"name":"意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":199,"name":"成功率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":200,"name":"成本","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":201,"name":"房型","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":202,"name":"房源","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":203,"name":"手机","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":205,"name":"抓取","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":206,"name":"投放","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":207,"name":"投诉","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":208,"name":"折扣","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":209,"name":"报表","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":210,"name":"抵用券","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":211,"name":"拜访","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":212,"name":"拨打号码量","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":214,"name":"排队量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":215,"name":"接单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":216,"name":"接通率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":217,"name":"接通量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":218,"name":"推荐","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":219,"name":"推送/push","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":220,"name":"提成","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":221,"name":"提现","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":222,"name":"搜索","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":223,"name":"支付","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":224,"name":"支付宝","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":225,"name":"支付指标","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":226,"name":"支付金额","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":227,"name":"收入","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":228,"name":"收款","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":229,"name":"收藏","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":230,"name":"收银台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":231,"name":"效果广告ARPU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":232,"name":"效果广告门店数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":233,"name":"整体服务万订单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":234,"name":"整体服务千POI","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":235,"name":"新增","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":236,"name":"新增绑卡支付用户数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":237,"name":"新客数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":238,"name":"旅游","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":239,"name":"日志","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":240,"name":"日期","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":241,"name":"时间","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":242,"name":"时间/Time","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":243,"name":"智能IVR自助量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":244,"name":"智能支付","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":245,"name":"曝光","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":246,"name":"月份","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":247,"name":"服务器","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":248,"name":"服务密度 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":249,"name":"未关工单平均单龄 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":250,"name":"未关工单平均超时时长","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":251,"name":"未关工单量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":253,"name":"机器人PV ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":254,"name":"权重","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":255,"name":"来源","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":256,"name":"标签点击量","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":257,"name":"标签自助率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":258,"name":"标签自助量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":259,"name":"标签访问量","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":260,"name":"模块","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":261,"name":"正式员工数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":262,"name":"注册","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":263,"name":"活动","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":264,"name":"活跃买家数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":265,"name":"流水","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":266,"name":"流水号","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":267,"name":"流程","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":268,"name":"流量","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":269,"name":"浏览","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":270,"name":"消费","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":271,"name":"消费额","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":272,"name":"渠道","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":273,"name":"满意率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":274,"name":"激活","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":275,"name":"点击","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":276,"name":"点击率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":277,"name":"点评APP","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":278,"name":"点评APP DAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":279,"name":"点评APP MAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":280,"name":"点评APP新客","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":281,"name":"点评在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":282,"name":"点评平台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":283,"name":"点评平台GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":284,"name":"点评平台活跃买家数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":285,"name":"点评平台订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":286,"name":"点评累计用户评价数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":287,"name":"点评累计老客数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":288,"name":"版本","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":289,"name":"特征","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":290,"name":"猫眼","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":291,"name":"猫眼APP","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":292,"name":"猫眼APP DAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":293,"name":"猫眼APP MAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":294,"name":"猫眼GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":295,"name":"猫眼动销POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":296,"name":"猫眼在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":297,"name":"猫眼在线首次合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":298,"name":"猫眼订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":299,"name":"猫眼购买意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":300,"name":"环比","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":301,"name":"现金券","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":302,"name":"生产力","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":303,"name":"生产力 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":304,"name":"用户","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":305,"name":"用户使用时长","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":306,"name":"用户补贴","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":307,"name":"用户评价数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":308,"name":"申请","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":309,"name":"申请人工量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":310,"name":"电影补贴率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":311,"name":"电话","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":312,"name":"留存","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":313,"name":"登录","description":"注意 “登陆”","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":314,"name":"真重开数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":315,"name":"真重开率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":316,"name":"票房","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":317,"name":"积分","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":318,"name":"站点","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":319,"name":"策略","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":320,"name":"筛选","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":321,"name":"签约","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":322,"name":"累计","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":323,"name":"累计绑卡支付用户数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":324,"name":"红包","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":325,"name":"纬度","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":326,"name":"经度","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":327,"name":"结算","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":328,"name":"维度","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":329,"name":"综合Take Rate","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":330,"name":"美团APP","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":331,"name":"美团APP DAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":332,"name":"美团APP MAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":333,"name":"美团APP新客","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":334,"name":"美团在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":335,"name":"美团平台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":336,"name":"美团平台GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":337,"name":"美团平台活跃买家数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":338,"name":"美团平台订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":339,"name":"美团支付订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":340,"name":"美团点评/美大","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":341,"name":"美团累计用户评价数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":342,"name":"美团累计老客数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":343,"name":"美大ARPU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":344,"name":"美大DAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":345,"name":"美大GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":346,"name":"美大MAU","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":347,"name":"美大动销POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":348,"name":"美大对外提供服务类别","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":349,"name":"美大总收入","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":350,"name":"美大新客","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":351,"name":"美大新客(点评平台)","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":352,"name":"美大新客(美团平台)","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":353,"name":"美大新客次月复购数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":354,"name":"美大活跃买家数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":355,"name":"美大用户注册到购买转化率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":356,"name":"美大移动设备订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":357,"name":"美大累计老客数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":358,"name":"美大覆盖城市数（国内）","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":359,"name":"美大覆盖城市数（国外）","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":360,"name":"美大订单均价","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":361,"name":"美大订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":362,"name":"美大访购率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":363,"name":"美大购买意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":364,"name":"美大转化率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":365,"name":"美大首次在线合作POI","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":366,"name":"联系人","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":367,"name":"联系客服量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":368,"name":"联络点","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":369,"name":"舆情量","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":370,"name":"菜品","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":371,"name":"营业","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":372,"name":"蜂窝","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":373,"name":"行政区","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":374,"name":"补贴","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":375,"name":"计费","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":376,"name":"订单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":377,"name":"订单(客服)","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":378,"name":"订单价格","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":379,"name":"订单号","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":380,"name":"订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":381,"name":"认证","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":382,"name":"许可证","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":383,"name":"设备","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":384,"name":"访问","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":385,"name":"评价","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":386,"name":"评分","description":"分词时注意得分/分数/score/得分","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":387,"name":"评论","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":388,"name":"负责人","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":389,"name":"财务","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":390,"name":"财务指标","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":391,"name":"账单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":392,"name":"账号","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":393,"name":"账户","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":394,"name":"购买","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":395,"name":"购买意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":396,"name":"贷款","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":397,"name":"资质","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":398,"name":"超时关单数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":399,"name":"超时退","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":400,"name":"超时退处理量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":401,"name":"超时退未处理量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":402,"name":"超时退申请量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":403,"name":"路径","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":404,"name":"转出率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":405,"name":"转出量 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":406,"name":"转化率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":407,"name":"运单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":408,"name":"退款","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":409,"name":"送达","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":410,"name":"通讯","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":411,"name":"邀请","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":412,"name":"配送","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":413,"name":"配送收入","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":414,"name":"配送订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":415,"name":"酒店","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":416,"name":"酒店旅游","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":417,"name":"酒店预定占比","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":418,"name":"酒旅","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":419,"name":"酒旅GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":420,"name":"酒旅动销POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":421,"name":"酒旅在线合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":422,"name":"酒旅在线首次合作POI数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":423,"name":"酒旅补贴费用","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":424,"name":"酒旅订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":425,"name":"酒旅购买意向UV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":426,"name":"重开数 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":427,"name":"重开率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":428,"name":"金融发展","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":429,"name":"金融服务","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":430,"name":"银行卡","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":431,"name":"销售","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":432,"name":"错误率","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":433,"name":"门店/POI","description":"分拆时包括poi shop_id等","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":434,"name":"门票","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":435,"name":"闪惠","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":436,"name":"间夜数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":437,"name":"非满率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":438,"name":"页面","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":439,"name":"顾客","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":440,"name":"预定","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":441,"name":"预测","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":442,"name":"预测/predict","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":443,"name":"预算","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":444,"name":"预约","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":445,"name":"预订","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":446,"name":"频道","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":447,"name":"餐饮平台","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":448,"name":"餐饮平台风控部","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":449,"name":"餐饮生态GMV","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":450,"name":"餐饮生态订单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":451,"name":"首次联络解决工单数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":452,"name":"首次联络解决工单率 ","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":453,"name":"首页","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":454,"name":"验证","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":455,"name":"骑手","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":456,"name":"骑手数","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0},{"id":457,"name":"黑名单","description":"","createTime":"2017-10-10 12:44:00","updateTime":"2017-10-10 12:44:00","creatorId":42268,"ownerId":42268,"isRoot":0,"isLeaf":0}]";
+tags = JSON.parse(tags);
+console.log(tags)

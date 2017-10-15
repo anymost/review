@@ -8,6 +8,9 @@
  * 3 await 后面既可以 处理promise 也能处理常规数据类型 number string boolean
  *
  * Async 函数中可以返回promise对象,用于进一步处理
+ *  如果返回的值为常规数据类型，则会自动调用Promise.resolve()对其进行包装
+ *  如果返回promise对象，则不作处理
+ * 
  *
  * await 后面的promise对象的状态可能为reject 所以最好应该await语句用try catch包裹
  *
