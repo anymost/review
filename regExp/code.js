@@ -710,4 +710,15 @@ console.log(reg.exec('<img src="hello">hello</img>'))*/
 // console.log(newFunc('hello11'))
 // console.log(newFunc('hello12'))
 
-
+const net = require('net');
+net.createServer(socket => {
+    socket.on('connection', () => {
+        console.log('connection');
+    })
+    socket.on('data', data => {
+        console.log(data);
+    })
+    socket.on('end', () => {
+        console.log('end')
+    })
+}).listen(3000)
