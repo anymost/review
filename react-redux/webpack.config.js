@@ -13,7 +13,7 @@ module.exports = {
             {
                 test: /\.js?$/,
                 exclude: /node_modules/,
-                loader: 'babel-core',
+                loader: 'babel-loader',
                 query: {
                     presets: ['es2015', 'react']
                 } //将react编译成js文件

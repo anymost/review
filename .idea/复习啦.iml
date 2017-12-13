@@ -8,6 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/reactRouterTest/react-router-tutorial/lessons/03-navigating-with-link/modules" />
       <excludeFolder url="file://$MODULE_DIR$/redux/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/reduxPractive/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/regExp/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>

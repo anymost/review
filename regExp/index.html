@@ -5,19 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+       
+    <style>
+        /*
+        .wrap{
+            display: flex;
+        }
+        .left{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .right{
+            flex: 1;
+            height: 100px;
+            background-color: rgb(33, 203, 233);
+        }
+        */
+       
+        /*.left{
+            float: left;
+            width: 100%;
+            height: 100px;
+            background-color: blue;
+            margin-right: -100px;
+        }
+        .right{
+            width: 100px;
+            height: 100px;
+            float: right;
+            background-color: rgb(33, 203, 233);
+        }
+        */
+       
+        /* .wrap:hover{
+            transform: scale(.5, .5); 
+        }
+        
+        .wrap:hover{
+            transform: rotate(45deg);
+        }
+        
+        .wrap:hover{
+            transform: skew(60deg);
+        }
+        */
+        .wrap{
+            border: 10px solid hsla(0, 0%, 0%, 100%);
+            background: #fff;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
-    
-    
-    <script>
-        window.addEventListener('beforeunload', function (event) {
-            event.preventDefault()
-            event.returnValue = false
-        })
-        window.onbeforeunload = function (event) {
-            event.preventDefault()
-            event.returnValue = false
-        }
-    </script>
+    <div class="wrap"> 
+    </div>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap{
+            width: 600px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 50px;
+            grid-column-gap: 10px;
+        }
+        .items:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="items">1</div>
+    <div class="items">2</div>
+    <div class="items">3</div>
+</div>
+<script>
+    /**
+    display: grid
+    grid-template-columns
+    grid-template-rows
+    grid-row-gap
+    grid-column-gap
+    grid-auto-rows
+    grid-auto-columns
+    grid-column-start
+    grid-column-end
+    grid-row-start
+    grid-row-end
+    */
+</script>
+
+</body>
+</html>

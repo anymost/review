@@ -1,0 +1,9 @@
+
+
+div.wrap{
+    display: flex
+}
+
+span.content{
+    display: inline-flex
+}

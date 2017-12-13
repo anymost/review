@@ -929,56 +929,15 @@ console.log(reg.exec('<img src="hello">hello</img>'))*/
 //   next: (value) => console.log(value)
 // });
 // subject.next('hello');
-// let array = [
-//     {name: 1, value: 1},
-//     {name: 2, value: 2},
-//     {name: 3, value: 3}
-// ];
-// let newArray = array.mapState(item => {
-//     if (item.name > 1) {
-//         return item.value
-//     }
-// })
-// console.log(newArray);
-
-
-// const Content extends React.Component{
-//     state = {
-//         x: 0,
-//         y: 0
-//     }
-//     handleEvent = event => {
-//         this.setState({
-//             x: event.clientX,
-//             y: event.clientY
-//         })
-//     }
-//     render() {
-//        return <div onMouseOver={this.handleEvent}>
-//             {this.props.func(this.state.x, this.state.y)}
-//        </div>
-//     }
-// }
-// const pingEpic = action$ =>
-// action$.ofType('PING')
-//   .delay(1000) // 异步等待 1000ms 然后继续
-//   .mapTo({ type: 'PONG' });
-// 
-const chooseToDispatch = (data, store) => {
-    if (data.code === 200) {
-        store.dispatch(loginSuccess({data: data.payload}))
-    } else {
-        store.dispatch(loginFailed({message: data.message}))
+let array = [
+    {name: 1, value: 1},
+    {name: 2, value: 2},
+    {name: 3, value: 3}
+];
+let newArray = array.filter(item => {
+    if (item.name > 1) {
+        return item.value
     }
-}
+})
+console.log(newArray);
 
-const userLoginEpic = (action$, store)=>
-action$.ofType(ActionTypes.LOGIN_START)
-.debounce(3000)
-.switchMap(action => 
-ajax.post('/login', action.payload)
-.map(data => data.response)
-.map(data => chooseToDispatch(data, store))
-.takeUntil(action$.ofType(ActionTypes.LOGIN_CANCEL))
-.catch(() => Observale.of(loginFailed({message: 'network error'})))
-)
