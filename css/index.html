@@ -8,46 +8,177 @@
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
     <style lang="">
+        /*.container{*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*background-color: white;*/
+            /*box-shadow: 0 0 0 5px red, 0 0 0 10px green;*/
+        /*}*/
+
+        /*.container{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: aquamarine;*/
+            /*border: 4px solid red;*/
+            /*border-radius: 50%;*/
+            /*box-shadow: 0 0 0  4px black;*/
+        /*}*/
+        /*.container{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: aquamarine;*/
+            /*border: 4px solid red;*/
+            /*border-radius: 50%;*/
+            /*outline: 4px solid black;*/
+        /*}*/
+        /*.container{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*padding: 10px;*/
+            /*margin: 10px;*/
+            /*border: 10px solid blue;*/
+            /*background-color: red;*/
+            /*background-position: top 20px left 20px;*/
+        /*}*/
+
+        /*.container{*/
+            /*width: 400px;*/
+            /*height: 100px;*/
+            /*background: linear-gradient(to right, red 50%, green 0);*/
+            /*background-size: 20% 100%;*/
+        /*}*/
+
+        /*.changeBig{*/
+            /*width:200px;*/
+            /*height:200px;*/
+            /*background-color:blue;*/
+            /*transition-property: all;*/
+            /*transition-duration: 4s;*/
+            /*transition-delay:1s;*/
+        /*}*/
+         /*.changeSmall{*/
+            /*width:400px;*/
+            /*height:400px;*/
+            /*background-color:red;*/
+            /*transition-property: all;*/
+            /*transition-duration: 4s;*/
+            /*transition-delay:1s;*/
+        /*}*/
+
+
+        /*.container {*/
+            /*position: relative;*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+        /*}*/
+        /*.container:before{*/
+            /*position: absolute;*/
+            /*left: 0;*/
+            /*top: 0;*/
+            /*right: 0;*/
+            /*bottom: 0;*/
+            /*content: '';*/
+            /*z-index: -1;*/
+            /*background: aliceblue;*/
+            /*transform: skew(45deg);*/
+        /*}*/
+
+        /*.container{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: aquamarine;*/
+            /*clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);*/
+        /*}*/
+
+        /*.container{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background: aquamarine;*/
+            /*background:*/
+                    /*linear-gradient(-45deg, transparent 10px, aquamarine 0) right,*/
+                    /*linear-gradient(45deg, transparent 10px, aquamarine 0) left;*/
+            /*background-size: 50% 100%;*/
+            /*background-repeat: no-repeat;*/
+        /*;*/
+
+        /*}*/
+        /*.container{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*position: relative;*/
+            /*display: inline-block;*/
+        /*}*/
+
+        /*.container::before{*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*right: 0;*/
+            /*bottom: 0;*/
+            /*left: 0;*/
+            /*z-index: -1;*/
+            /*content: '';*/
+            /*transform: rotateX(5deg) perspective(.5em);*/
+            /*background: aquamarine;*/
+        /*}*/
+
+        /*body, .container::before{*/
+            /*background: url(http://img1.imgtn.bdimg.com/it/u=4068988763,2778352356&fm=200&gp=0.jpg) 0 /cover fixed;*/
+        /*}*/
+
+        /*.container{*/
+            /*background-origin: content-box;*/
+            /*color: #000;*/
+            /*position: absolute;*/
+            /*left: 500px;*/
+            /*top: 200px;*/
+            /*width: 300px;*/
+            /*height: 300px;*/
+            /*background: hsla(0, 0%, 100%, .3);*/
+        /*}*/
+
+        /*.container::before{*/
+            /*position: absolute;*/
+            /*top: 0;right: 0;bottom: 0;left: 0;*/
+            /*content: '';*/
+            /*filter: blur(20px);*/
+            /*margin: -20px;*/
+        /*}*/
+        /*.container{*/
+            /*display: inline-block;*/
+        /*}*/
+        /*.container::after{*/
+            /*content: '\A';*/
+            /*white-space: pre;*/
+        /*}*/
         div{
-            width:400px;
-            height:400px;
-            background-color: red;
+            width: 100px;
+            height: 20px;
         }
-        .changeBig{
-            width:200px;
-            height:200px;
-            background-color:blue;
-            transition-property: all;
-            transition-duration: 4s;
-            transition-delay:1s;
-        }
-         .changeSmall{
-            width:400px;
-            height:400px;
-            background-color:red;
-            transition-property: all;
-            transition-duration: 4s;
-            transition-delay:1s;
+        div:nth-child(even){
+            background-color: aquamarine;
         }
     </style>
 </head>
 <body>
 
-<button>change</button>
-<div>
 
-</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
 <script>
-   
-    let div = document.querySelector('div');
-    div.addEventListener('mouseover',event=>{
-        div.classList.remove('changeSmall')
-        div.classList.add('changeBig');
-    },false);
-    div.addEventListener('mouseout',event=>{
-        div.classList.remove('changeBig');
-        div.classList.add('changeSmall');
-    },false);
+
+    // let div = document.querySelector('div');
+    // div.addEventListener('mouseover',event=>{
+    //     div.classList.remove('changeSmall')
+    //     div.classList.add('changeBig');
+    // },false);
+    // div.addEventListener('mouseout',event=>{
+    //     div.classList.remove('changeBig');
+    //     div.classList.add('changeSmall');
+    // },false);
 </script>
 </body>
 </html>

@@ -181,8 +181,10 @@
  *
  */
 
+
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import {ReactDOMServer} from 'react-dom/server';
 import PropTypes from 'prop-types';
 //
 // function reducer(state = {state: 'initial'}, action) {
@@ -397,4 +399,23 @@ import PropTypes from 'prop-types';
 // }
 
 // ReactDOM.render(<Container/>, document.querySelector('#app'));
+function Son() {
+    return <div>hello world</div>
+}
+function Content() {
+    return <div>
+        <Son/>
+        <h4>ha</h4>
+    </div>
+}
 
+class Container extends React.Component{
+    render() {
+        return <div>hello world</div>
+    }
+    componentDidMount() {
+        console.log(ReactDOMServer.renderToString(<Content/>));
+    }
+}
+
+ReactDOM.render(<Container/>, document.querySelector('#app'));

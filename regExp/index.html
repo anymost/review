@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-       
     <style>
         /*
         .wrap{
@@ -50,16 +49,59 @@
             transform: skew(60deg);
         }
         */
+        /*
         .wrap{
-            border: 10px solid hsla(0, 0%, 0%, 100%);
-            background: #fff;
+            width: 500px;
+            height: 500px;
+            padding: 1em;
+            border: 2em solid transparent;
+            background: linear-gradient(#fff, #fff) padding-box,
+             url('https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2753937502,1505306594&fm=173&s=18899F5D5C61600D0BB4246A0300C03A&w=218&h=146&img.JPEG')
+             border-box 0 / cover;
+
+        }
+        */
+        /*
+        .wrap{
+            position: relative;
+        }
+        .wrap:after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+    
+        }
+        
+        .wrap{
             width: 100px;
             height: 100px;
+            background-color: red;
+            clip-path: polygon(20% 0,80% 0, 100% 100%, 0 100%);
         }
+       */
+       .wrap{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: green;         
+       }
+       .content{
+           width: 10px;
+           height: 10px;
+           clip-path: (50% 0, 100% 100%, 0 100%);
+           background-color: black;
+           position: absolute;
+           right: -10px;
+           top: 20px;
+       }
     </style>
 </head>
 <body>
     <div class="wrap"> 
+        <div class="content"></div>
     </div>
 </body>
-</html>
+</html>  
